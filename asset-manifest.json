@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ece-learn/static/css/main.85be0dc9.chunk.css",
+    "main.js": "/ece-learn/static/js/main.0aa4a8fb.chunk.js",
+    "main.js.map": "/ece-learn/static/js/main.0aa4a8fb.chunk.js.map",
+    "runtime-main.js": "/ece-learn/static/js/runtime-main.2e9e640b.js",
+    "runtime-main.js.map": "/ece-learn/static/js/runtime-main.2e9e640b.js.map",
+    "static/js/2.8890dacf.chunk.js": "/ece-learn/static/js/2.8890dacf.chunk.js",
+    "static/js/2.8890dacf.chunk.js.map": "/ece-learn/static/js/2.8890dacf.chunk.js.map",
+    "index.html": "/ece-learn/index.html",
+    "static/css/main.85be0dc9.chunk.css.map": "/ece-learn/static/css/main.85be0dc9.chunk.css.map",
+    "static/js/2.8890dacf.chunk.js.LICENSE.txt": "/ece-learn/static/js/2.8890dacf.chunk.js.LICENSE.txt",
+    "static/media/test.8c918167.txt": "/ece-learn/static/media/test.8c918167.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2e9e640b.js",
+    "static/js/2.8890dacf.chunk.js",
+    "static/css/main.85be0dc9.chunk.css",
+    "static/js/main.0aa4a8fb.chunk.js"
+  ]
+}
