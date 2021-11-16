@@ -71,7 +71,7 @@ const List = (props) => {
             setOption(new_option);
 
             setUserState((oldState) => (
-                {...oldState, [category]: text}
+                {"科目": text, "科目教師": "", "年份": "", "類別": ""}
             ))
         } else if (category === "科目教師") {
             filter_list = props.items.filter((item) => {
