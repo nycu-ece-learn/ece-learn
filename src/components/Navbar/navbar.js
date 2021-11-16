@@ -7,7 +7,7 @@ const NavbarCustom = (props) => {
     const [inputText, setInputText] = useState("");
 
     const ToggleHandler = () => {
-        let nav = document.getElementById("myTopNav")
+        const nav = document.getElementById("myTopNav")
 
         if (nav.className === classes["top-nav"]) {
             nav.className += ` ${classes["responsive"]}`;
@@ -20,6 +20,16 @@ const NavbarCustom = (props) => {
 
     const gradeClickHandler = (e) => {
         ToggleHandler();
+        const buttons = document.querySelectorAll("#myTopNav > button");
+        buttons.forEach((button, id) => {
+            if (id !== 0 && id !== 7) {
+                if (button.value.toString() === e.target.value.toString()) {
+                    button.className = classes["select"];
+                } else {
+                    button.className = "";
+                }
+            }
+        })
         props.gradeClick(e.target.value);
     }
 
@@ -31,7 +41,7 @@ const NavbarCustom = (props) => {
     return (
         <div className={classes["top-nav"]} id="myTopNav">
             <button className={classes.active}>NYCU ECE</button>
-            <button value="readme" onClick={gradeClickHandler}>README</button>
+            <button value="readme" className={classes["select"]} onClick={gradeClickHandler}>README</button>
             <button value="first" onClick={gradeClickHandler}>大一</button>
             <button value="second" onClick={gradeClickHandler}>大二</button>
             <button value="third" onClick={gradeClickHandler}>大三</button>

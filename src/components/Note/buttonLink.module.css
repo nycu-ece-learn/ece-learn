@@ -1,0 +1,19 @@
+.btn {
+    margin-left: 10px;
+    height: inherit;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    border: rgb(10, 88, 202) 1px solid;
+    color: rgb(10, 88, 202);
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(10, 88, 202);
+    color: white;
+}

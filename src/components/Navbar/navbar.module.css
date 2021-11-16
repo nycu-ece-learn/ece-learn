@@ -25,6 +25,11 @@
     color: black;
 }
 
+.top-nav button.select {
+    background-color: #ddd;
+    color: black;
+}
+
 .top-nav button.active {
     background-color: #5089C6;
     color: white;

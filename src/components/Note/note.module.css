@@ -7,6 +7,7 @@
 div > h2 {
     color: #272121;
     font-size: 28px;
+    margin-bottom: 30px;
 }
 
 div > p {
@@ -14,8 +15,12 @@ div > p {
     font-size: 20px;
 }
 
+div > img {
+    width: 100%;
+}
+
 span:first-letter {
-    text-transform:capitalize;
+    text-transform: capitalize;
 }
 
 .block {

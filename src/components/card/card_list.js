@@ -22,8 +22,8 @@ const CardList = () => {
 
     return (
         <div className={classes["container"]}>
-            {data.map(text => (
-                <Card text={text}/>
+            {data.map((text, id) => (
+                <Card key={id} text={text}/>
             ))}
         </div>
     )
