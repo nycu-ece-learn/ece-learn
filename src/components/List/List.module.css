@@ -1,0 +1,95 @@
+table {
+    margin: auto;
+    width: 70%;
+    position: relative;
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0 2px 4px -1px;
+}
+
+table thead {
+    position: sticky;
+}
+
+table .center-col {
+    text-align: center;
+}
+
+tr:hover {
+    background-color: rgba(239, 239, 239, 0.7);
+}
+
+td, th {
+    border-top: 1px solid #dddddd;
+    padding: 8px;
+}
+
+td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.icon {
+    background-color: inherit;
+    margin-left: 3px;
+    border: None;
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: auto;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: max-content;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    overflow-y: auto;
+    max-height: 30vh;
+}
+
+.dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    background-color: inherit;
+    border: None;
+    cursor: pointer;
+}
+
+.dropdown-content button:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    table thead {
+        top: 240px;
+    }
+}

@@ -1,0 +1,14 @@
+footer {
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    background-color: #EEEEEE;
+    text-align: center;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 1rem 0;
+    }
+}

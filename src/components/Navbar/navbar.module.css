@@ -1,0 +1,85 @@
+.top-nav {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: #2B2B2B;
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+.top-nav button {
+    float: left;
+    display: block;
+    background-color: inherit;
+    border: None;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.top-nav button:not(:first-child):hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.top-nav button.active {
+    background-color: #5089C6;
+    color: white;
+}
+
+.top-nav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+.top-nav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .top-nav button:not(:first-child) {
+        display: none;
+    }
+
+    .top-nav input[type=text] {
+        display: none;
+    }
+
+    .top-nav button.icon {
+        float: right;
+        display: block;
+    }
+
+    .top-nav.responsive {
+        position: sticky;
+        top: 0;
+    }
+
+    .top-nav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .top-nav.responsive button:not(:last-child) {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+
+    .top-nav.responsive input[type=text] {
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 8px 0;
+        text-indent: 10px;
+    }
+}
