@@ -3,6 +3,7 @@ table {
     width: 70%;
     position: relative;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
 table th {
@@ -18,13 +19,19 @@ table .center-col {
     text-align: center;
 }
 
+.decorate {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
 tr:hover {
     background-color: rgba(239, 239, 239, 0.7);
 }
 
 td, th {
     border-top: 1px solid #dddddd;
-    padding: 8px;
+    padding: 8px 0;
 }
 
 td {
@@ -36,39 +43,31 @@ td {
 
 .icon {
     background-color: inherit;
-    margin-left: 3px;
-    border: None;
-    cursor: pointer;
-    transform: scale(0.98);
-}
-
-.icon:hover {
-    transform: scale(1.1);
+    border: none;
+    margin-left: 5px;
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
-    width: auto;
+    width: 100%;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    width: max-content;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
     overflow-y: auto;
     max-height: 30vh;
 }
 
+
 .dropdown-content button {
     color: black;
     padding: 12px 16px;
     display: block;
-    font-size: 15px;
     width: 100%;
+    font-size: 15px;
     text-align: center;
     background-color: inherit;
     border: None;

@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import classes from "./List.module.css"
 import ListElement from "./ListElement";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faFilter} from "@fortawesome/free-solid-svg-icons";
+import {faBars, faFilter} from "@fortawesome/free-solid-svg-icons";
 
-const table_head = ["年份", "科目", "科目教師", "類別"];
+const table_head = ["科目", "科目教師", "年份", "類別"];
+const tab_size = [20, 15, 15, 10];
 
 function getUnique(items) {
     return [
@@ -20,15 +21,15 @@ const List = (props) => {
     // Option will be: (year, subject, teacher, type)
     const [option, setOption] = useState(getUnique(props.items))
     const [userState, setUserState] = useState({
-        "年份": "",
-        "科目": "",
-        "科目教師": "",
-        "類別": ""
+        "科目": "", "科目教師": "", "年份": "", "類別": ""
     })
 
     React.useEffect(() => {
         setItems(props.items);
         setOption(getUnique(props.items));
+        setUserState({
+            "科目": "", "科目教師": "", "年份": "", "類別": ""
+        })
     }, [props.items])
 
     function clickItem(e) {
@@ -43,10 +44,9 @@ const List = (props) => {
                 for (const [key, value] of Object.entries(userState)) {
                     // Start from index 1
                     index += 1;
-                    if ((index === 1) && (item[index] !== text)) {
+                    if ((index === 3) && (item[index] !== text)) {
                         return false;
-                    }
-                    else if (index === 1) {
+                    } else if (index === 3) {
                         continue;
                     }
 
@@ -62,12 +62,12 @@ const List = (props) => {
             });
         } else if (category === "科目") {
             filter_list = props.items.filter((item) => {
-                return item[2] === text
+                return item[1] === text
             });
 
             // Maintain the subject
             const new_option = getUnique(filter_list);
-            new_option[1] = [...new Set(props.items.map(arr => arr[2]).sort())]
+            new_option[0] = [...new Set(props.items.map(arr => arr[1]).sort())]
             setOption(new_option);
 
             setUserState((oldState) => (
@@ -79,10 +79,9 @@ const List = (props) => {
                 let checkState = {...userState};
                 for (const [key, value] of Object.entries(userState)) {
                     index += 1;
-                    if (index === 3 && item[index] !== text) {
+                    if (index === 2 && item[index] !== text) {
                         return false;
-                    }
-                    else if (index === 3) {
+                    } else if (index === 2) {
                         continue;
                     }
 
@@ -98,7 +97,7 @@ const List = (props) => {
             });
 
             setOption((oldOption) => {
-                oldOption[0] = [...new Set(filter_list.map(arr => arr[1]).sort())]
+                oldOption[2] = [...new Set(filter_list.map(arr => arr[3]).sort())]
                 oldOption[3] = [...new Set(filter_list.map(arr => arr[4]).sort())]
                 return oldOption
             })
@@ -115,8 +114,7 @@ const List = (props) => {
 
                     if (index === 4 && item[index] !== text) {
                         return false;
-                    }
-                    else if (index === 4) {
+                    } else if (index === 4) {
                         continue;
                     }
 
@@ -139,26 +137,24 @@ const List = (props) => {
         <table>
             <thead style={{top: `${props.stickyTop}px`}}>
             <tr>
-                <th key="1">#</th>
-                <th key="2">年級</th>
+                <th style={{width: "10%"}} key="1">#</th>
+                <th style={{width: "10%"}} key="2">年級</th>
                 {
                     table_head.map((item, id) => (
-                        <th key={`${id + 2}`}>{item}
+                        <th key={`${id + 2}`} style={{width: `${tab_size[id]}%`}} className={classes["decorate"]}>
                             <div className={classes["dropdown"]}>
-                                <button className={classes.icon}>
-                                    <FontAwesomeIcon icon={faFilter}/>
-                                </button>
-                                <div className={classes["dropdown-content"]} id={item}>
+                                {item}
+                                <button className={classes["icon"]}><FontAwesomeIcon icon={faFilter}/></button>
+                                <div style={{width: `${tab_size[id]}%`}} className={classes["dropdown-content"]} id={item}>
                                     {option[id].map((item, id) => (
-                                        <button key={id} className={classes["filter-link"]}
-                                                onClick={clickItem}>{item}</button>
+                                        <button key={id} onClick={clickItem}>{item}</button>
                                     ))}
                                 </div>
                             </div>
                         </th>
                     ))
                 }
-                <th key="7">檔案</th>
+                <th style={{width: "20%"}} key="7">檔案</th>
             </tr>
             </thead>
             <tbody>
