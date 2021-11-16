@@ -70,9 +70,9 @@ const List = (props) => {
             new_option[0] = [...new Set(props.items.map(arr => arr[1]).sort())]
             setOption(new_option);
 
-            setUserState((oldState) => (
+            setUserState(
                 {"科目": text, "科目教師": "", "年份": "", "類別": ""}
-            ))
+            )
         } else if (category === "科目教師") {
             filter_list = props.items.filter((item) => {
                 let index = 0;
