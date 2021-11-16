@@ -17,14 +17,14 @@ const Note = () => {
 
             <h2>B. 網站建議
                 <Button
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSfn5uEo1MefhezayHOvvfWoIlAKJ7XvnKiUSaXXdDE0cLPAag/viewform?usp=pp_url"
+                    link="https://docs.google.com/forms/d/e/1FAIpQLSfn5uEo1MefhezayHOvvfWoIlAKJ7XvnKiUSaXXdDE0cLPAag/viewform?usp=pp_url"
                     text="表單"/>
             </h2>
             <p>&bull; 你們可以填你們想要的功能或考古，但是能不能實現就不一定了🥲</p><br/>
 
             <h2>C. 考古提供
                 <Button
-                    href="https://docs.google.com/forms/d/e/1FAIpQLScFRb2OO94VijW5mF4EigLjT39Dbg0HUD7kue3uosTNTS8W5g/viewform?pli=1"
+                    link="https://docs.google.com/forms/d/e/1FAIpQLScFRb2OO94VijW5mF4EigLjT39Dbg0HUD7kue3uosTNTS8W5g/viewform?pli=1"
                     text="表單"/>
             </h2>
             <br/>
