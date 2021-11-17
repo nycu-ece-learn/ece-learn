@@ -5,11 +5,23 @@ import List from "./components/List/List";
 import Footer from "./components/Footer/footer";
 import Note from "./components/Note/note"
 import CardList from "./components/card/card_list";
+import one from "./one.txt";
+import two from "./two.txt";
+import advance from "./advance.txt";
+import other from "./other.txt"
+
+const processCSV = (str, delim = ",") => {
+    const rows = str.slice(str.indexOf("\n") + 1).split("\n");
+    return rows.map(row => {
+        return row.split(delim);
+    });
+}
 
 
-function App(props) {
+function App() {
     const [height, setHeight] = useState("48");
-    const [displayData, setDisplayData] = useState(props.ori);
+    const [allData, setAllData] = useState([]);
+    const [displayData, setDisplayData] = useState([]);
     const [showList, setShowList] = useState("readme");
 
     const setStickHandler = (heightValue) => {
@@ -21,28 +33,51 @@ function App(props) {
             setShowList(value);
         } else {
             setShowList("list");
-            const decodeGrade = (value) => {
-                if (value === "大一") return "first";
-                if (value === "大二") return "second";
-                if (value === "大三") return "third";
-                if (value === "大四") return "fourth";
+            if (value === "first") {
+                const temp_data = [];
+                fetch(one)
+                    .then(blob => blob.text())
+                    .then(data => temp_data.push(...processCSV(data)));
+                setDisplayData(temp_data);
+                setAllData(temp_data);
             }
-
-            const filter_list = props.ori.filter(data => decodeGrade(data[0]) === value)
-            setDisplayData(filter_list);
+            if (value === "second") {
+                const temp_data = [];
+                fetch(two)
+                    .then(blob => blob.text())
+                    .then(data => temp_data.push(...processCSV(data)));
+                setDisplayData(temp_data);
+                setAllData(temp_data);
+            }
+            if (value === "advance") {
+                const temp_data = [];
+                fetch(advance)
+                    .then(blob => blob.text())
+                    .then(data => temp_data.push(...processCSV(data)));
+                setDisplayData(temp_data);
+                setAllData(temp_data);
+            }
+            if (value === "other") {
+                const temp_data = [];
+                fetch(other)
+                    .then(blob => blob.text())
+                    .then(data => temp_data.push(...processCSV(data)));
+                setDisplayData(temp_data);
+                setAllData(temp_data);
+            }
         }
     }
 
     const setTextChange = (text) => {
         setShowList("list");
         if (text === "") {
-            setDisplayData(props.ori);
+            setDisplayData(allData);
             return;
         }
 
         const reg = new RegExp(text, "gi");
 
-        const filter_hl_list = props.ori.reduce((filter, data) => {
+        const filter_hl_list = allData.reduce((filter, data) => {
             let match = false;
             for (let i = 0; i < data.length - 1 && !match; ++i) {
                 if (data[i].match(reg)) {
@@ -88,7 +123,7 @@ function App(props) {
                     else return <List stickyTop={height} items={displayData}/>
                 })()
             }
-            <div style={{ height: "90px" }}/>
+            <div style={{height: "90px"}}/>
             <Footer/>
         </div>
     );

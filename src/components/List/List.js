@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import classes from "./List.module.css"
 import ListElement from "./ListElement";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars, faFilter} from "@fortawesome/free-solid-svg-icons";
+import {faFilter} from "@fortawesome/free-solid-svg-icons";
 
 const table_head = ["科目", "科目教師", "年份", "類別"];
 const tab_size = [20, 15, 15, 10];

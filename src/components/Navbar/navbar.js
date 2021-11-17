@@ -44,8 +44,8 @@ const NavbarCustom = (props) => {
             <button value="readme" className={classes["select"]} onClick={gradeClickHandler}>README</button>
             <button value="first" onClick={gradeClickHandler}>大一</button>
             <button value="second" onClick={gradeClickHandler}>大二</button>
-            <button value="third" onClick={gradeClickHandler}>大三</button>
-            <button value="fourth" onClick={gradeClickHandler}>大四</button>
+            <button value="advance" onClick={gradeClickHandler}>大三以上</button>
+            <button value="other" onClick={gradeClickHandler}>通識與其他</button>
             <button value="hope" onClick={gradeClickHandler}>願望清單</button>
             <input type="text" placeholder="Search" value={inputText} onChange={inputTextChangeHandler}/>
             <button className={classes.icon} onClick={ToggleHandler}>

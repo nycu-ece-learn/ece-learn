@@ -13,6 +13,7 @@ const Note = () => {
             <p>1. 考古資源是眾多學長姐慢慢累積出來的，請不要惡意使用。</p>
             <p>2. 左上邊支援不同年級，右上方支援搜尋功能。搜尋到的文字會被 Highlight。</p>
             <p>3. 如果要用 Filter，請先選科目再選其他。</p>
+            <p>4. 有 Bug 的話很正常啦，重新整理就好💪。</p>
             <br/>
 
             <h2>B. 網站建議
@@ -27,6 +28,7 @@ const Note = () => {
                     link="https://docs.google.com/forms/d/e/1FAIpQLScFRb2OO94VijW5mF4EigLjT39Dbg0HUD7kue3uosTNTS8W5g/viewform?pli=1"
                     text="表單"/>
             </h2>
+            <p>&bull; 也麻煩大家提供考古喔！</p><br/>
             <br/>
             <h2>D. 未來規劃</h2>
             <p>未來會更新的大概只有迷因吧</p>
