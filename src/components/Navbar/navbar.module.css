@@ -10,6 +10,7 @@
 .top-nav button {
     float: left;
     display: block;
+    height: 50px;
     background-color: inherit;
     border: None;
     color: white;

@@ -1,5 +1,5 @@
 import NavbarCustom from "./components/Navbar/navbar";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import classes from "./App.module.css"
 import List from "./components/List/List";
 import Footer from "./components/Footer/footer";
@@ -17,6 +17,26 @@ const processCSV = (str, delim = ",") => {
     });
 }
 
+const one_data = [];
+fetch(one)
+    .then(blob => blob.text())
+    .then(data => one_data.push(...processCSV(data)));
+
+const two_data = [];
+fetch(two)
+    .then(blob => blob.text())
+    .then(data => two_data.push(...processCSV(data)));
+
+const advance_data = [];
+fetch(advance)
+    .then(blob => blob.text())
+    .then(data => advance_data.push(...processCSV(data)));
+
+const other_data = []
+fetch(other)
+    .then(blob => blob.text())
+    .then(data => other_data.push(...processCSV(data)));
+
 
 function App() {
     const [height, setHeight] = useState("48");
@@ -28,46 +48,26 @@ function App() {
         setHeight(heightValue);
     }
 
-    useEffect(() => {
-
-    }, [displayData]);
-
     const setGradeClick = (value) => {
         if (value === "readme" || value === "hope") {
             setShowList(value);
         } else {
             setShowList("list");
             if (value === "first") {
-                const temp_data = [];
-                fetch(one)
-                    .then(blob => blob.text())
-                    .then(data => temp_data.push(...processCSV(data)));
-                setDisplayData(temp_data);
-                setAllData(temp_data);
+                setDisplayData(one_data);
+                setAllData(one_data);
             }
             if (value === "second") {
-                const temp_data = [];
-                fetch(two)
-                    .then(blob => blob.text())
-                    .then(data => temp_data.push(...processCSV(data)));
-                setDisplayData(temp_data);
-                setAllData(temp_data);
+                setDisplayData(two_data);
+                setAllData(two_data);
             }
             if (value === "advance") {
-                const temp_data = [];
-                fetch(advance)
-                    .then(blob => blob.text())
-                    .then(data => temp_data.push(...processCSV(data)));
-                setDisplayData(temp_data);
-                setAllData(temp_data);
+                setDisplayData(advance_data);
+                setAllData(advance_data);
             }
             if (value === "other") {
-                const temp_data = [];
-                fetch(other)
-                    .then(blob => blob.text())
-                    .then(data => temp_data.push(...processCSV(data)));
-                setDisplayData(temp_data);
-                setAllData(temp_data);
+                setDisplayData(other_data);
+                setAllData(other_data);
             }
         }
     }
