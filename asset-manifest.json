@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ece-learn/static/css/main.27dcd87a.chunk.css",
-    "main.js": "/ece-learn/static/js/main.ce0ff34c.chunk.js",
-    "main.js.map": "/ece-learn/static/js/main.ce0ff34c.chunk.js.map",
+    "main.css": "/ece-learn/static/css/main.77a718e2.chunk.css",
+    "main.js": "/ece-learn/static/js/main.8c31acec.chunk.js",
+    "main.js.map": "/ece-learn/static/js/main.8c31acec.chunk.js.map",
     "runtime-main.js": "/ece-learn/static/js/runtime-main.2e9e640b.js",
     "runtime-main.js.map": "/ece-learn/static/js/runtime-main.2e9e640b.js.map",
     "static/js/2.8ec70de3.chunk.js": "/ece-learn/static/js/2.8ec70de3.chunk.js",
     "static/js/2.8ec70de3.chunk.js.map": "/ece-learn/static/js/2.8ec70de3.chunk.js.map",
     "index.html": "/ece-learn/index.html",
-    "static/css/main.27dcd87a.chunk.css.map": "/ece-learn/static/css/main.27dcd87a.chunk.css.map",
+    "static/css/main.77a718e2.chunk.css.map": "/ece-learn/static/css/main.77a718e2.chunk.css.map",
     "static/js/2.8ec70de3.chunk.js.LICENSE.txt": "/ece-learn/static/js/2.8ec70de3.chunk.js.LICENSE.txt",
     "static/media/advance.b7e3d423.txt": "/ece-learn/static/media/advance.b7e3d423.txt",
     "static/media/meme.09401814.png": "/ece-learn/static/media/meme.09401814.png",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.2e9e640b.js",
     "static/js/2.8ec70de3.chunk.js",
-    "static/css/main.27dcd87a.chunk.css",
-    "static/js/main.ce0ff34c.chunk.js"
+    "static/css/main.77a718e2.chunk.css",
+    "static/js/main.8c31acec.chunk.js"
   ]
 }
