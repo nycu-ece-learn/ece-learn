@@ -1,14 +1,14 @@
 import NavbarCustom from "./components/Navbar/navbar";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import classes from "./App.module.css"
 import List from "./components/List/List";
 import Footer from "./components/Footer/footer";
 import Note from "./components/Note/note"
 import CardList from "./components/card/card_list";
-import one from "./one.txt";
-import two from "./two.txt";
-import advance from "./advance.txt";
-import other from "./other.txt"
+import one from "./csv_file/one.txt";
+import two from "./csv_file/two.txt";
+import advance from "./csv_file/advance.txt";
+import other from "./csv_file/other.txt"
 
 const processCSV = (str, delim = ",") => {
     const rows = str.slice(str.indexOf("\n") + 1).split("\n");
@@ -27,6 +27,10 @@ function App() {
     const setStickHandler = (heightValue) => {
         setHeight(heightValue);
     }
+
+    useEffect(() => {
+
+    }, [displayData]);
 
     const setGradeClick = (value) => {
         if (value === "readme" || value === "hope") {
