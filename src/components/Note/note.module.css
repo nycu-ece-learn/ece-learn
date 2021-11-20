@@ -54,7 +54,7 @@ span:first-letter {
     border-color: #faebcc;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .note-layout {
         padding: 10px;
         width: auto;
