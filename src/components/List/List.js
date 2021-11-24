@@ -11,7 +11,18 @@ function getUnique(items) {
     return [
         [...new Set(items.map(arr => arr[1]).sort())],
         [...new Set(items.map(arr => arr[2]).sort())],
-        [...new Set(items.map(arr => arr[3]).sort())],
+        [...new Set(items.map(arr => arr[3]).sort((x, y) => {
+            const num_x = Number(x.replace ( /[^\d.]/g, '' ));
+            const num_y = Number(y.replace ( /[^\d.]/g, '' ));
+
+            if (num_x < num_y) {
+                return -1
+            } else if (num_x > num_y) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }))],
         [...new Set(items.map(arr => arr[4]).sort())],
     ]
 }
