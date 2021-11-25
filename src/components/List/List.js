@@ -9,9 +9,9 @@ const tab_size = [20, 15, 15, 10];
 
 function getUnique(items) {
     return [
+        [...new Set(items.map(arr => arr[0]).sort())],
         [...new Set(items.map(arr => arr[1]).sort())],
-        [...new Set(items.map(arr => arr[2]).sort())],
-        [...new Set(items.map(arr => arr[3]).sort((x, y) => {
+        [...new Set(items.map(arr => arr[2]).sort((x, y) => {
             const num_x = Number(x.replace ( /[^\d.]/g, '' ));
             const num_y = Number(y.replace ( /[^\d.]/g, '' ));
 
@@ -23,13 +23,13 @@ function getUnique(items) {
                 return 0;
             }
         }))],
-        [...new Set(items.map(arr => arr[4]).sort())],
+        [...new Set(items.map(arr => arr[3]).sort())],
     ]
 }
 
 const List = (props) => {
     const [items, setItems] = useState(props.items);
-    // Option will be: (year, subject, teacher, type)
+    // Option will be: (subject, teacher, year, type)
     const [option, setOption] = useState(getUnique(props.items))
     const [userState, setUserState] = useState({
         "科目": "", "科目教師": "", "年份": "", "類別": ""
@@ -53,44 +53,7 @@ const List = (props) => {
                 let index = 0;
                 let checkState = {...userState};
                 for (const [key, value] of Object.entries(userState)) {
-                    // Start from index 1
-                    index += 1;
-                    if ((index === 3) && (item[index] !== text)) {
-                        return false;
-                    } else if (index === 3) {
-                        continue;
-                    }
-
-                    if (value.length === 0) {
-                        checkState[key] = item[index]
-                    }
-
-                    if (item[index] !== checkState[key]) {
-                        return false;
-                    }
-                }
-                return true
-            });
-        } else if (category === "科目") {
-            filter_list = props.items.filter((item) => {
-                return item[1] === text
-            });
-
-            // Maintain the subject
-            const new_option = getUnique(filter_list);
-            new_option[0] = [...new Set(props.items.map(arr => arr[1]).sort())]
-            setOption(new_option);
-
-            setUserState(
-                {"科目": text, "科目教師": "", "年份": "", "類別": ""}
-            )
-        } else if (category === "科目教師") {
-            filter_list = props.items.filter((item) => {
-                let index = 0;
-                let checkState = {...userState};
-                for (const [key, value] of Object.entries(userState)) {
-                    index += 1;
-                    if (index === 2 && item[index] !== text) {
+                    if ((index === 2) && (item[index] !== text)) {
                         return false;
                     } else if (index === 2) {
                         continue;
@@ -103,13 +66,62 @@ const List = (props) => {
                     if (item[index] !== checkState[key]) {
                         return false;
                     }
+
+                    index += 1;
+                }
+                return true
+            });
+        } else if (category === "科目") {
+            filter_list = props.items.filter((item) => {
+                return item[0] === text
+            });
+
+            // Maintain the subject
+            const new_option = getUnique(filter_list);
+            new_option[0] = [...new Set(props.items.map(arr => arr[0]).sort())]
+            setOption(new_option);
+
+            setUserState(
+                {"科目": text, "科目教師": "", "年份": "", "類別": ""}
+            )
+        } else if (category === "科目教師") {
+            filter_list = props.items.filter((item) => {
+                let index = 0;
+                let checkState = {...userState};
+                for (const [key, value] of Object.entries(userState)) {
+                    if (index === 1 && item[index] !== text) {
+                        return false;
+                    } else if (index === 1) {
+                        return true;
+                    }
+
+                    if (value.length === 0) {
+                        checkState[key] = item[index]
+                    }
+
+                    if (item[index] !== checkState[key]) {
+                        return false;
+                    }
+
+                    index += 1;
                 }
                 return true
             });
 
             setOption((oldOption) => {
-                oldOption[2] = [...new Set(filter_list.map(arr => arr[3]).sort())]
-                oldOption[3] = [...new Set(filter_list.map(arr => arr[4]).sort())]
+                oldOption[2] = [...new Set(filter_list.map(arr => arr[2]).sort((x, y) => {
+                    const num_x = Number(x.replace ( /[^\d.]/g, '' ));
+                    const num_y = Number(y.replace ( /[^\d.]/g, '' ));
+
+                    if (num_x < num_y) {
+                        return -1
+                    } else if (num_x > num_y) {
+                        return 1;
+                    } else {
+                        return 0;
+                    }
+                }))]
+                oldOption[3] = [...new Set(filter_list.map(arr => arr[3]).sort())]
                 return oldOption
             })
 
@@ -121,11 +133,9 @@ const List = (props) => {
                 let index = 0;
                 let checkState = {...userState};
                 for (const [key, value] of Object.entries(userState)) {
-                    index += 1;
-
-                    if (index === 4 && item[index] !== text) {
+                    if (index === 3 && item[index] !== text) {
                         return false;
-                    } else if (index === 4) {
+                    } else if (index === 3) {
                         continue;
                     }
 
@@ -136,6 +146,8 @@ const List = (props) => {
                     if (item[index] !== checkState[key]) {
                         return false;
                     }
+
+                    index += 1;
                 }
                 return true
             });
@@ -149,7 +161,6 @@ const List = (props) => {
             <thead style={{top: `${props.stickyTop}px`}}>
             <tr>
                 <th style={{width: "10%"}} key="1">#</th>
-                <th style={{width: "10%"}} key="2">年級</th>
                 {
                     table_head.map((item, id) => (
                         <th key={`${id + 2}`} style={{width: `${tab_size[id]}%`}} className={classes["decorate"]}>
@@ -165,6 +176,7 @@ const List = (props) => {
                         </th>
                     ))
                 }
+                <th style={{width: "10%"}} key="6">類型</th>
                 <th style={{width: "20%"}} key="7">檔案</th>
             </tr>
             </thead>
