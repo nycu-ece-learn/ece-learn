@@ -10,7 +10,6 @@ import two from "./csv_file/two.txt";
 import advance from "./csv_file/advance.txt";
 import other from "./csv_file/other.txt"
 import {Helmet} from "react-helmet";
-import og from "./og.jpeg"
 
 const processCSV = (str, delim = ",") => {
     const rows = str.slice(str.indexOf("\n") + 1).split("\n");
@@ -122,10 +121,12 @@ function App() {
                 <title>交大電機考古網站</title>
                 <meta name="description"
                       content="交大電機專用考古網站，您考前的好幫手" />
+                <meta name="og:description"
+                      content="交大電機專用考古網站，您考前的好幫手" />
                 <meta property="og:site_name" content="Learn with NYCE ECE" />
                 <meta property="og:locale" content="zh_tw" />
                 <meta property="og:url" content="nycu-ece-learn.github.io" />
-                <meta property="og:image" content={og} />
+                <meta property="og:image" content="https://storage.googleapis.com/ece-files/og.jpeg" />
             </Helmet>
             <NavbarCustom
                 stickHandler={setStickHandler} gradeClick={setGradeClick}
