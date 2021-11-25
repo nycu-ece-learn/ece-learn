@@ -126,7 +126,8 @@ function App() {
                 <meta property="og:site_name" content="Learn with NYCE ECE" />
                 <meta property="og:locale" content="zh_tw" />
                 <meta property="og:url" content="nycu-ece-learn.github.io" />
-                <meta property="og:image" content="https://storage.googleapis.com/ece-files/og.jpeg" />
+                <meta property="og:image:secure_url" content="https://storage.googleapis.com/ece-files/og.jpeg" />
+                <meta property="og:image:type" content="image/jpeg" />
             </Helmet>
             <NavbarCustom
                 stickHandler={setStickHandler} gradeClick={setGradeClick}
