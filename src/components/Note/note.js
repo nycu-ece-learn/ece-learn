@@ -16,7 +16,7 @@ const Note = () => {
             <p>4. 有 Bug 的話很正常啦，重新整理就好💪。</p>
             <br/>
 
-            <h2>B. 網站建議
+            <h2>B. 願望清單
                 <Button
                     link="https://docs.google.com/forms/d/e/1FAIpQLSfn5uEo1MefhezayHOvvfWoIlAKJ7XvnKiUSaXXdDE0cLPAag/viewform?usp=pp_url"
                     text="表單"/>
