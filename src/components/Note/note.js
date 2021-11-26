@@ -7,7 +7,10 @@ const Note = () => {
     return (
         <div className={classes["note-layout"]}>
             <NoteBlock blockType="danger" text="
-            ⚠️ 注意！Windows 用戶在解壓縮檔時請使用內建的 7z 解壓縮。若是使用 Windows 內建的解壓縮方式是會看不到東西的"
+            ⚠️ 注意！Windows 用戶在解壓縮檔時請使用內建的 7z 解壓縮。若是使用 Windows 內建的解壓縮方式是會看不到東西的。"
+            />
+            <NoteBlock blockType="info" text="
+            📣 因為版權的問題，考古網站不會提供課本與課本題目及其解答。"
             />
             <h2>A. 使用說明</h2>
             <p>1. 考古資源是眾多學長姐慢慢累積出來的，請不要惡意使用。</p>
@@ -22,6 +25,8 @@ const Note = () => {
                     text="表單"/>
             </h2>
             <p>&bull; 你們可以填你們想要的功能或考古，但是能不能實現就不一定了🥲</p><br/>
+            <p>&bull; 課本的題目與解答恕不提供，有版權疑慮。</p><br/>
+            <p>&bull; 不合理的要求或是已經完成的事項會被移除。</p><br/>
 
             <h2>C. 考古提供
                 <Button
