@@ -6,7 +6,6 @@ const prefix = "https://storage.googleapis.com/ece-files";
 const ListElement = (props) => {
     return (
         <tr className={classes["big-tr"]}>
-            <td key="0" className={classes["center-col"]}>{props.index + 1}</td>
             <td key="1" className={classes["center-col"]}>{props.item[0]}</td>
             <td key="2" className={classes["center-col"]}>{props.item[1]}</td>
             <td key="3" className={classes["center-col"]}>{props.item[2]}</td>

@@ -4,8 +4,8 @@ import ListElement from "./ListElement";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFilter} from "@fortawesome/free-solid-svg-icons";
 
-const table_head = ["科目", "科目教師", "年份", "類別"];
-const tab_size = [20, 15, 15, 10];
+const table_head = ["科目", "教師", "年份", "類別"];
+const tab_size = [25, 15, 15, 15];
 
 function getUnique(items) {
     return [
@@ -32,14 +32,14 @@ const List = (props) => {
     // Option will be: (subject, teacher, year, type)
     const [option, setOption] = useState(getUnique(props.items))
     const [userState, setUserState] = useState({
-        "科目": "", "科目教師": "", "年份": "", "類別": ""
+        "科目": "", "教師": "", "年份": "", "類別": ""
     })
 
     React.useEffect(() => {
         setItems(props.items);
         setOption(getUnique(props.items));
         setUserState({
-            "科目": "", "科目教師": "", "年份": "", "類別": ""
+            "科目": "", "教師": "", "年份": "", "類別": ""
         })
     }, [props.items])
 
@@ -82,9 +82,9 @@ const List = (props) => {
             setOption(new_option);
 
             setUserState(
-                {"科目": text, "科目教師": "", "年份": "", "類別": ""}
+                {"科目": text, "教師": "", "年份": "", "類別": ""}
             )
-        } else if (category === "科目教師") {
+        } else if (category === "教師") {
             filter_list = props.items.filter((item) => {
                 let index = 0;
                 let checkState = {...userState};
@@ -160,7 +160,6 @@ const List = (props) => {
         <table>
             <thead style={{top: `${props.stickyTop}px`}}>
             <tr>
-                <th style={{width: "10%"}} key="1">#</th>
                 {
                     table_head.map((item, id) => (
                         <th key={`${id + 2}`} style={{width: `${tab_size[id]}%`}} className={classes["decorate"]}>
