@@ -24,8 +24,8 @@ const Note = () => {
                     link="https://docs.google.com/forms/d/e/1FAIpQLSfn5uEo1MefhezayHOvvfWoIlAKJ7XvnKiUSaXXdDE0cLPAag/viewform?usp=pp_url"
                     text="表單"/>
             </h2>
-            <p>&bull; 你們可以填你們想要的功能或考古，但是能不能實現就不一定了🥲</p><br/>
-            <p>&bull; 課本的題目與解答恕不提供，有版權疑慮。</p><br/>
+            <p>&bull; 你們可以填你們想要的功能或考古，但是能不能實現就不一定了🥲</p>
+            <p>&bull; 課本的題目與解答恕不提供，有版權疑慮。</p>
             <p>&bull; 不合理的要求或是已經完成的事項會被移除。</p><br/>
 
             <h2>C. 考古提供
