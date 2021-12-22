@@ -462,7 +462,7 @@ VLSI實驗,闕河鳴,109學年,期中考,zip,midterm,大三以上選修/VLSI實�
 超大型積體電路導論,闕河鳴,109學年,期中考,pdf,midterm2,大三以上選修/VLSI導論/闕河鳴/考古題/2020/Midterm2/VLSI導論_闕河鳴_2020F_MID2.pdf
 超大型積體電路導論,闕河鳴,109學年,期中考,pdf,midterm2_sol,大三以上選修/VLSI導論/闕河鳴/考古題/2020/Midterm2/VLSI導論_闕河鳴_2020F_MID2_SOL.pdf
 超大型積體電路導論,闕河鳴,109學年,期末考,pdf,final,大三以上選修/VLSI導論/闕河鳴/考古題/2020/Final/VLSI導論_闕河鳴_2020F_FINAL.pdf
-超大型積體電路導論,闕河鳴,109學年,期末考,pdf,final_sol,大三以上選修/VLSI導論/闕河鳴/考古題/2020/Final/VLSI導論_闕河鳴_2020F_FINAL_SOL.pdf
+超大型積體電路導論,闕河鳴,109學年,期末考,pdf,final_sol,大三以上選修/VLSI導論/闕河鳴/考古題/2020/Final/闕河鳴_2020F_FINAL_SOL.pdf
 超大型積體電路導論,闕河鳴,109學年,講義,pdf,overview,大三以上選修/VLSI導論/闕河鳴/教學講義/2020F/IntroVLSI_overview.pdf
 超大型積體電路導論,闕河鳴,109學年,講義,pdf,lec0,大三以上選修/VLSI導論/闕河鳴/教學講義/2020F/lec00-intro.pdf
 超大型積體電路導論,闕河鳴,109學年,講義,pdf,lec1,大三以上選修/VLSI導論/闕河鳴/教學講義/2020F/lec01-cktlay.pdf
