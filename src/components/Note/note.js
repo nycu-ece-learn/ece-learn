@@ -7,7 +7,7 @@ const Note = () => {
     return (
         <div className={classes["note-layout"]}>
             <NoteBlock blockType="danger" text="
-            ⚠️ 現在暑假期間考古網站正在升級，站不開放"
+            ⚠️ 現在暑假期間考古網站正在升級，暫不開放"
             />
             <NoteBlock blockType="danger" text="
             ⚠️ 注意！Windows 用戶在解壓縮檔時請使用內建的 7z 解壓縮。若是使用 Windows 內建的解壓縮方式是會看不到東西的。"
