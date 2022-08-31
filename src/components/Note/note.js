@@ -1,7 +1,7 @@
 import classes from "./note.module.css"
 import NoteBlock from "./noteBlock";
 import Button from "./buttonLink";
-import meme from "../../meme.png"
+import meme from "../../assets/meme.png"
 
 const Note = () => {
     return (
