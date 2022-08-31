@@ -1,0 +1,37 @@
+.homepage_cover {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.homepage_title {
+    position: absolute;
+    font-family: 'SweiHalfMoonCJKtc-Bold';
+    font-size: 4vw;
+    text-decoration: none;
+    letter-spacing: 3vw;
+    left: 23vw;
+    top: 11vw;
+    color: white;
+}
+
+.homepage_subtitle {
+    position: absolute;
+    font-size: 2vw;
+    text-decoration: none;
+    font-family: 'erasbold';
+    letter-spacing: 0.3vw;
+    top: 16vw;
+    color: white;
+}
+
+@font-face {
+    font-family: 'SweiHalfMoonCJKtc-Bold';
+    src: url('./fonts/SweiHalfMoonCJKtc-Bold.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'erasbold';
+    src: url('./fonts/ErasBoldITC.ttf') format("truetype");
+}
