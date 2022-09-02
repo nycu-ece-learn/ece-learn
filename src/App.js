@@ -139,7 +139,7 @@ function App() {
                 stickHandler={setStickHandler} gradeClick={setGradeClick}
                 textChange={setTextChange}
             />
-            <img src={HomepageCover} alt='home page cover' style={{width: '100%'}}/>
+            <img src={HomepageCover} alt='home page cover' style={{ width: '100%' }}/>
             {
                 (() => {
                     if (showList === "readme") return <Note />
