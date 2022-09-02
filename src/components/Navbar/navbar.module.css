@@ -15,7 +15,7 @@
     border: None;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 12px 16px;
     text-decoration: none;
     font-size: 17px;
     cursor: pointer;
@@ -23,7 +23,7 @@
 }
 
 .top-nav button:not(:first-child):hover {
-    background-color: #ddd;
+    background-color: #bbb;
     color: black;
 }
 
