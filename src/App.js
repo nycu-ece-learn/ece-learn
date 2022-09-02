@@ -130,7 +130,7 @@ function App() {
                     content="交大電機專用考古網站，您考前的好幫手" />
                 <meta name="og:description"
                     content="交大電機專用考古網站，您考前的好幫手" />
-                <meta property="og:site_name" content="Learn with NYCE ECE" />
+                <meta property="og:site_name" content="Learn with NYCU ECE" />
                 <meta property="og:locale" content="zh_tw" />
                 <meta property="og:url" content="nycu-ece-learn.github.io" />
                 <meta property="og:image:secure_url" content="https://storage.googleapis.com/ece-files/og.jpeg" />
