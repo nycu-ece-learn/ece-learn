@@ -10,7 +10,6 @@ import two from "./csv_file/two.txt";
 import advance from "./csv_file/advance.txt";
 import other from "./csv_file/other.txt"
 import { Helmet } from "react-helmet";
-import HomepageCover from './assets/cover.png';
 
 const processCSV = (str, delim = ",") => {
     const rows = str.slice(str.indexOf("\n") + 1).split("\n");
@@ -139,7 +138,6 @@ function App() {
                 stickHandler={setStickHandler} gradeClick={setGradeClick}
                 textChange={setTextChange}
             />
-            <img src={HomepageCover} alt='home page cover' style={{ width: '100%' }}/>
             {
                 (() => {
                     if (showList === "readme") return <Note />

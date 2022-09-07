@@ -40,7 +40,7 @@ const NavbarCustom = (props) => {
 
     return (
         <div className={classes["top-nav"]} id="myTopNav">
-            <button className={classes.active}>NYCU ECE</button>
+            <button className={classes.active} style={{ cursor: 'auto' }}>NYCU ECE</button>
             <button value="readme" className={classes["select"]} onClick={gradeClickHandler}>README</button>
             <button value="first" onClick={gradeClickHandler}>大一</button>
             <button value="second" onClick={gradeClickHandler}>大二</button>

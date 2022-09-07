@@ -7,11 +7,12 @@
 div > h2 {
     color: #272121;
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 div > p {
-    margin: 10px auto;
+    margin-top: 10px;
     font-size: 20px;
 }
 

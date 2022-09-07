@@ -2,10 +2,13 @@ import classes from "./note.module.css"
 import NoteBlock from "./noteBlock";
 import Button from "./buttonLink";
 import meme from "../../assets/meme.png"
+import HomepageCover from '../../assets/cover.png';
 
 const Note = () => {
     return (
         <div className={classes["note-layout"]}>
+            <img src={HomepageCover} alt='home page cover' style={{ width: '100%' }}/>
+            {/*
             <NoteBlock blockType="danger" text="
             ⚠️ 現在暑假期間考古網站正在升級，暫不開放"
             />
@@ -15,6 +18,7 @@ const Note = () => {
             <NoteBlock blockType="info" text="
             📣 因為版權的問題，考古網站不會提供課本與課本題目及其解答。"
             />
+            */}
             <h2>A. 使用說明</h2>
             <p>1. 考古資源是眾多學長姐慢慢累積出來的，請不要惡意使用。</p>
             <p>2. 左上邊支援不同年級，右上方支援搜尋功能。搜尋到的文字會被 Highlight。</p>
@@ -39,8 +43,8 @@ const Note = () => {
             <p>&bull; 也麻煩大家提供考古喔！</p><br/>
             <br/>
             <h2>D. 未來規劃</h2>
-            <p>未來會更新的大概只有迷因吧</p>
-            <img style={{marginLeft: "auto", marginRight: "auto", display: "block"}} src={meme} alt="meme"/>
+            <p>&bull; 我們會努力讓網頁變好，拜託別炮了QQ</p>
+            <img style={{marginLeft: "auto", marginRight: "auto", display: "block", marginTop: '30px'}} src={meme} alt="meme"/>
         </div>
     );
 };
