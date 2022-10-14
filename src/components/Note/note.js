@@ -1,5 +1,4 @@
 import classes from "./note.module.css"
-import NoteBlock from "./noteBlock";
 import Button from "./buttonLink";
 import meme from "../../assets/meme.png"
 import HomepageCover from '../../assets/cover.png';
@@ -42,7 +41,7 @@ const Note = () => {
             </h2>
             <p>&bull; 也麻煩大家提供考古喔！</p><br/>
             <br/>
-            <h2>D. 未來規劃</h2>
+            <h2>D. 想說的話</h2>
             <p>&bull; 我們會努力讓網頁變好，拜託別炮了QQ</p>
             <img style={{marginLeft: "auto", marginRight: "auto", display: "block", marginTop: '30px'}} src={meme} alt="meme"/>
         </div>

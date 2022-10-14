@@ -2,14 +2,14 @@ import NavbarCustom from "./components/Navbar/navbar";
 import { useState } from "react";
 import classes from "./App.module.css"
 import List from "./components/List/List";
-import Footer from "./components/Footer/footer";
-import Note from "./components/Note/note"
 import CardList from "./components/card/card_list";
 import one from "./csv_file/one.txt";
 import two from "./csv_file/two.txt";
 import advance from "./csv_file/advance.txt";
 import other from "./csv_file/other.txt"
 import { Helmet } from "react-helmet";
+import HomePage from "./components/HomePage/homepage";
+import NewFooter from "./components/Footer/newfooter";
 
 const processCSV = (str, delim = ",") => {
     const rows = str.slice(str.indexOf("\n") + 1).split("\n");
@@ -121,7 +121,7 @@ function App() {
     }
 
     return (
-        <div className="App">
+        <div className={classes["App"]}>
             <Helmet>
                 <title>交大電機考古網站</title>
                 <meta name="description"
@@ -140,13 +140,13 @@ function App() {
             />
             {
                 (() => {
-                    if (showList === "readme") return <Note />
+                    if (showList === "readme") return <HomePage />
                     else if (showList === "hope") return <CardList />
                     else return <List stickyTop={height} items={displayData} />
                 })()
             }
-            <div style={{ height: "90px" }} />
-            <Footer />
+            {/*<div style={{ height: "90px" }} />*/}
+            <NewFooter />
         </div>
     );
 }

@@ -157,34 +157,37 @@ const List = (props) => {
     }
 
     return (
-        <table>
-            <thead style={{ top: `${props.stickyTop}px` }}>
-                <tr>
-                    {
-                        table_head.map((item, id) => (
-                            <th key={`${id + 2}`} style={{ width: `${tab_size[id]}%` }} className={classes["decorate"]}>
-                                <div className={classes["dropdown"]}>
-                                    {item}
-                                    <button className={classes["icon"]}><FontAwesomeIcon icon={faFilter} /></button>
-                                    <div style={{ width: `${tab_size[id]}%` }} className={classes["dropdown-content"]} id={item}>
-                                        {option[id].map((item, id) => (
-                                            <button key={id} onClick={clickItem}>{item}</button>
-                                        ))}
+        <div className={classes["list_div"]}>
+            <table>
+                <thead style={{ top: `${props.stickyTop}px` }}>
+                    <tr>
+                        {
+                            table_head.map((item, id) => (
+                                <th key={`${id + 2}`} style={{ width: `${tab_size[id]}%` }} className={classes["decorate"]}>
+                                    <div className={classes["dropdown"]}>
+                                        {item}
+                                        <button className={classes["icon"]}><FontAwesomeIcon icon={faFilter} /></button>
+                                        <div style={{ width: `${tab_size[id]}%` }} className={classes["dropdown-content"]} id={item}>
+                                            {option[id].map((item, id) => (
+                                                <button key={id} onClick={clickItem}>{item}</button>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
-                            </th>
-                        ))
-                    }
-                    <th style={{ width: "10%" }} key="6">類型</th>
-                    <th style={{ width: "20%" }} key="7">檔案</th>
-                </tr>
-            </thead>
-            <tbody>
-                {items.map((item, index) => (
-                    <ListElement key={index} item={item} index={index} />
-                ))}
-            </tbody>
-        </table>
+                                </th>
+                            ))
+                        }
+                        <th style={{ width: "10%" }} key="6">類型</th>
+                        <th style={{ width: "20%" }} key="7">檔案</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {items.map((item, index) => (
+                        <ListElement key={index} item={item} index={index} />
+                    ))}
+                </tbody>
+            </table>
+        </div>
+
     );
 };
 

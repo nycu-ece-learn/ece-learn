@@ -1,0 +1,108 @@
+.newfooter {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    background-color: #CCCCCC;
+    flex-direction: column;
+}
+
+.icon_set {
+    height: 50px;
+    width: 500px;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.nycueesa_title {
+    font-size: 25px;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 100px;
+    color: #444444;
+    letter-spacing: 3px;
+}
+
+.facebook_icon {
+    position: relative;
+    top: -5px;
+}
+
+.github_icon {
+    position: relative;
+    top: -2px;
+    margin-left: 20px;
+}
+
+.youtube_icon {
+    position: relative;
+    top: 1px;
+    margin-left: 20px;
+    color: #333333;
+}
+
+.development_text {
+    font-size: 20px;
+    position: absolute;
+    right: 70px;
+    margin-top: 40px;
+    color: #444444;
+    letter-spacing: 1px;
+    z-index: 300;
+    line-height: 40px;
+}
+
+.copyright_text {
+    position: absolute;
+    left: 416px;
+    margin-top: 115px;
+    font-size: 25px;
+    color: #444444;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1400px) {
+    .newfooter {
+        justify-content: center;
+        align-items: center;
+    }
+    .copyright_text {
+        position: relative;
+        margin-top: auto;
+        top: -57px;
+        left: 151px;
+        font-size: 25px;
+    }
+    .nycueesa_title {
+        margin-left: 0px;
+    }
+    .facebook_icon {
+        left: -67px;
+    }
+    .github_icon {
+        left: -57px;
+    }
+    .youtube_icon {
+        left: -47px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .newfooter {
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+    }
+    .nycueesa_title {
+        display: none;
+    }
+    .icon_set {
+        display: none;
+    }
+    .copyright_text {
+        position: relative;
+        margin-top: 115px;
+        left: auto;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+}

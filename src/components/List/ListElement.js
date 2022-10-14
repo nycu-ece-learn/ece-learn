@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./List.module.css";
 
-const prefix = "https://storage.googleapis.com/ece-files";
+//const prefix = "/file";
 
 const ListElement = (props) => {
     return (
@@ -12,7 +12,7 @@ const ListElement = (props) => {
             <td key="4" className={classes["center-col"]}>{props.item[3]}</td>
             <td key="5" className={classes["center-col"]}>{props.item[4]}</td>
             <td key="6" className={classes["center-col"]}>
-                <a href={`${prefix}/${props.item[6]}`} target="_blank" rel="noreferrer" >{props.item[5]}</a>
+                <a href={`/${props.item[6]}`} target="_blank" rel="noreferrer" >{props.item[5]}</a>
             </td>
         </tr>
     )
