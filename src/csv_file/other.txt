@@ -44,7 +44,6 @@
 統計學,彭南夫,106學年,小考,jpg,quiz1,通識與其他/統計學/彭南夫/Quiz/106/quiz1.jpg
 統計學,彭南夫,106學年,小考,zip,quiz2,通識與其他/統計學/彭南夫/Quiz/106/quiz2.zip
 統計學,彭南夫,104學年,期中考,zip,midterm,通識與其他/統計學/彭南夫/Midterm/104_midterm.zip
-統計學,彭南夫,106學年,期中考,zip,midterm,通識與其他/統計學/彭南夫/Midterm/106_midterm.zip
 統計學,彭南夫,108學年,作業,pdf,hw1,通識與其他/統計學/彭南夫/homework/108_hw1.pdf
 統計學,彭南夫,108學年,作業,pdf,hw2,通識與其他/統計學/彭南夫/homework/108_hw2.pdf
 統計學,彭南夫,108學年,作業,pdf,hw3,通識與其他/統計學/彭南夫/homework/108_hw3.pdf
@@ -71,14 +70,8 @@
 統計學,彭南夫,107學年,期末考,jpg,final,通識與其他/統計學/彭南夫/2018fall/final.jpg
 統計學,彭南夫,107學年,期末考,pdf,final sol,通識與其他/統計學/彭南夫/2018fall/final_sol.pdf
 統計學,陳志榮,105學年,期末考,7z,final,通識與其他/統計學/陳志榮/2016/final.7z
-統計學,陳志榮,106學年,期中考,zip,midterm,通識與其他/統計學/陳志榮/2017/midterm.zip
-統計學,陳志榮,107學年,期中考,zip,midterm,通識與其他/統計學/陳志榮/2018_fall/midterm.zip
 統計學,陳志榮,107學年,期末考,zip,final,通識與其他/統計學/陳志榮/2018_fall/final.zip
-統計學,陳志榮,108學年上,期中考,zip,midterm,通識與其他/統計學/陳志榮/2019_fall/midterm.zip
 統計學,陳志榮,108學年上,期末考,zip,final,通識與其他/統計學/陳志榮/2019_fall/final.zip
-統計學,陳志榮,108學年下,期中考,zip,midterm,通識與其他/統計學/陳志榮/2019_spring/final.zip
-統計學,陳志榮,108學年下,期末考,zip,final,通識與其他/統計學/陳志榮/2019_spring/final.zip
-統計學,陳志榮,109學年上,期中考,zip,midterm,通識與其他/統計學/陳志榮/2020_fall/midterm.zip
 統計學,陳志榮,未知,作業,pdf,hw1,通識與其他/統計學/陳志榮/hw1.pdf
 統計學,陳志榮,未知,作業,pdf,hw2,通識與其他/統計學/陳志榮/hw2.pdf
 統計學,陳志榮,未知,作業,pdf,hw3,通識與其他/統計學/陳志榮/hw3.pdf

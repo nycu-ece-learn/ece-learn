@@ -92,3 +92,13 @@ td {
         top: 240px;
     }
 }
+
+.list_div {
+    min-height: calc(100vh - 250px);
+}
+
+@media screen and (max-width: 700px) {
+    .list_div {
+        min-height: calc(100vh - 100px);
+    }
+}

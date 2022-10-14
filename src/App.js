@@ -1,15 +1,15 @@
 import NavbarCustom from "./components/Navbar/navbar";
-import {useState} from "react";
+import { useState } from "react";
 import classes from "./App.module.css"
 import List from "./components/List/List";
-import Footer from "./components/Footer/footer";
-import Note from "./components/Note/note"
 import CardList from "./components/card/card_list";
 import one from "./csv_file/one.txt";
 import two from "./csv_file/two.txt";
 import advance from "./csv_file/advance.txt";
 import other from "./csv_file/other.txt"
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
+import HomePage from "./components/HomePage/homepage";
+import NewFooter from "./components/Footer/newfooter";
 
 const processCSV = (str, delim = ",") => {
     const rows = str.slice(str.indexOf("\n") + 1).split("\n");
@@ -50,6 +50,11 @@ function App() {
     }
 
     const setGradeClick = (value) => {
+        document.documentElement.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "instant",
+        });
         if (value === "readme" || value === "hope") {
             setShowList(value);
         } else {
@@ -116,14 +121,14 @@ function App() {
     }
 
     return (
-        <div className="App">
+        <div className={classes["App"]}>
             <Helmet>
                 <title>交大電機考古網站</title>
                 <meta name="description"
-                      content="交大電機專用考古網站，您考前的好幫手" />
+                    content="交大電機專用考古網站，您考前的好幫手" />
                 <meta name="og:description"
-                      content="交大電機專用考古網站，您考前的好幫手" />
-                <meta property="og:site_name" content="Learn with NYCE ECE" />
+                    content="交大電機專用考古網站，您考前的好幫手" />
+                <meta property="og:site_name" content="Learn with NYCU ECE" />
                 <meta property="og:locale" content="zh_tw" />
                 <meta property="og:url" content="nycu-ece-learn.github.io" />
                 <meta property="og:image:secure_url" content="https://storage.googleapis.com/ece-files/og.jpeg" />
@@ -135,13 +140,13 @@ function App() {
             />
             {
                 (() => {
-                    if (showList === "readme") return <Note/>
-                    else if (showList === "hope") return <CardList/>
-                    else return <List stickyTop={height} items={displayData}/>
+                    if (showList === "readme") return <HomePage />
+                    else if (showList === "hope") return <CardList />
+                    else return <List stickyTop={height} items={displayData} />
                 })()
             }
-            <div style={{height: "90px"}}/>
-            <Footer/>
+            {/*<div style={{ height: "90px" }} />*/}
+            <NewFooter />
         </div>
     );
 }

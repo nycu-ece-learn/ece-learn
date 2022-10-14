@@ -1,0 +1,97 @@
+.homepage {
+    width: 100%;
+    height: 76vw;
+    z-index: 0;
+}
+
+.homepage_first {
+    width: 100%;
+    height: 51vw;
+    position: relative;
+    top: -8px;
+    z-index: 1;
+}
+
+.homepage_first_title {
+    font-size: 1.7vw;
+    letter-spacing: 0.25vw;
+    color: rgb(250, 241, 215);
+    position: absolute;
+    top: 31vw;
+    left: 10vw;
+    z-index: 2;
+}
+
+.homepage_first_text {
+    font-size: 1.1vw;
+    letter-spacing: 0.1vw;
+    color: rgb(250, 241, 215);
+    position: absolute;
+    top: 35vw;
+    left: 10vw;
+    z-index: 2;
+    line-height: 2vw;
+}
+
+.homepage_second_title {
+    font-size: 1.7vw;
+    letter-spacing: 0.25vw;
+    color: rgb(250, 241, 215);
+    position: absolute;
+    top: 46vw;
+    left: 10vw;
+    z-index: 2;
+}
+
+.homepage_second_text {
+    font-size: 1.1vw;
+    letter-spacing: 0.1vw;
+    color: rgb(250, 241, 215);
+    position: absolute;
+    top: 50vw;
+    left: 10vw;
+    z-index: 2;
+    line-height: 2vw;
+}
+
+.homepage_third_title {
+    font-size: 1.7vw;
+    letter-spacing: 0.25vw;
+    color: rgb(250, 241, 215);
+    position: absolute;
+    top: 59vw;
+    left: 10vw;
+    z-index: 2;
+}
+
+.homepage_third_text {
+    font-size: 1.1vw;
+    letter-spacing: 0.1vw;
+    color: rgb(250, 241, 215);
+    position: absolute;
+    top: 63vw;
+    left: 10vw;
+    z-index: 2;
+    line-height: 2vw;
+}
+
+.homepage_fourth_title {
+    font-size: 1.7vw;
+    letter-spacing: 0.25vw;
+    color: rgb(250, 241, 215);
+    position: absolute;
+    top: 68vw;
+    left: 10vw;
+    z-index: 2;
+}
+
+.homepage_fourth_text {
+    font-size: 1.1vw;
+    letter-spacing: 0.1vw;
+    color: rgb(250, 241, 215);
+    position: absolute;
+    top: 72vw;
+    left: 10vw;
+    z-index: 2;
+    line-height: 2vw;
+}

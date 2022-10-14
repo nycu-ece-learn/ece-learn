@@ -1,4 +1,5 @@
 科目,教授,年份,類別,類型,名稱,路徑
+
 Java程式設計,蔡中庸,107學年,上機,7z,lab,大二/Java程式設計/Java_蔡中庸/作業/LAB.7z
 Java程式設計,蔡中庸,107學年,作業,7z,hw,大二/Java程式設計/Java_蔡中庸/作業/HW.7z
 Java程式設計,蔡中庸,105學年,期中考,pdf,midterm1,大二/Java程式設計/Java_蔡中庸/考古/Unknown/05JAVA_Mid_1.pdf
@@ -180,12 +181,10 @@ Java程式設計,蔡中庸,109學年,期末考,zip,final,大二/Java程式設計
 電磁學(一),黃謀勤,108學年,小考,pdf,quiz,大二/電磁學/黃謀勤_電磁學(一)/2019_Spring/2019_EM_QUIZ.pdf
 電磁學(一),黃謀勤,108學年,小考,pdf,quiz_sol,大二/電磁學/黃謀勤_電磁學(一)/2019_Spring/2019_EM_QUIZ_SOL.pdf
 電磁學(一),黃謀勤,108學年,期末考,pdf,final,大二/電磁學/黃謀勤_電磁學(一)/2019_Spring/EMI-Final-Solutions.pdf
-電磁學(一),黃謀勤,109學年,期中考,zip,midterm1,大二/電磁學/黃謀勤_電磁學(一)/2020_Spring/midterm1.zip
 電磁學(一),黃謀勤,109學年,期中考,zip,midterm2,大二/電磁學/黃謀勤_電磁學(一)/2020_Spring/midterm2.zip
 電磁學(一),黃謀勤,109學年,期末考,zip,final,大二/電磁學/黃謀勤_電磁學(一)/2020_Spring/final.zip
 電磁學(一),黃謀勤,109學年,作業,docx,HW1,大二/電磁學/黃謀勤_電磁學(一)/2020_Spring/HW/hw1.docx
 電磁學(一),黃謀勤,109學年,作業,zip,HW2,大二/電磁學/黃謀勤_電磁學(一)/2020_Spring/HW/hw2.zip
-電磁學(一),黃謀勤,109學年,作業,pdf,HW3,大二/電磁學/黃謀勤_電磁學(一)/2020_Spring/HW/hw3.pdf
 ,,,,nan,,
 電磁學(二),黃瑞彬,109學年,期中考,jpeg,midterm,大二/電磁學/黃瑞彬_電磁學(二)/2020/midterm/midterm.jpeg
 電磁學(二),黃謀勤,106學年,講義,pdf,ch1,大二/電磁學/黃謀勤_電磁學(二)/ch1.pdf
@@ -331,8 +330,6 @@ Java程式設計,蔡中庸,109學年,期末考,zip,final,大二/Java程式設計
 電子學(一),李義明,102學年,期中考,zip,midterm1,大二/電子學/電子學(一)/李義明/midterm1_2013.zip
 電子學(一),李義明,102學年,期中考,zip,midterm2,大二/電子學/電子學(一)/李義明/midterm2_2013.zip
 電子學(一),陳科宏,106學年,期中考,zip,midterm,大二/電子學/電子學(一)/陳科宏/2017/midterm.zip
-電子學(一),陳科宏,106學年,期末考,zip,final,大二/電子學/電子學(一)/陳科宏/2017/final.zip
-電子學(一),陳科宏,107學年,作業,zip,ch5,大二/電子學/電子學(一)/陳科宏/2018/HW5.zip
 電子學(一),陳科宏,107學年,作業,pdf,ch6,大二/電子學/電子學(一)/陳科宏/2018/micro_HW6.pdf
 電子學(一),陳科宏,108學年,作業,pdf,ch2,大二/電子學/電子學(一)/陳科宏/HW/ME_陳科宏_CH2.pdf
 電子學(一),陳科宏,108學年,作業,pdf,ch3,大二/電子學/電子學(一)/陳科宏/HW/ME_陳科宏_CH3.pdf
@@ -359,7 +356,6 @@ Java程式設計,蔡中庸,109學年,期末考,zip,final,大二/Java程式設計
 電子學(二),陳科宏,未知,筆記,pdf,ch12,大二/電子學/電子學(二)/陳科宏/handout/Ch12.pdf
 電子學(二),陳科宏,107學年,期中考,zip,midterm,大二/電子學/電子學(二)/陳科宏/2018_spring/2018_midterm.zip
 電子學(二),陳科宏,107學年,期末考,zip,final,大二/電子學/電子學(二)/陳科宏/2018_spring/2018_final.zip
-電子學(二),陳科宏,107學年,作業,zip,ch8,大二/電子學/電子學(二)/陳科宏/HW/蔡曜鴻/ch8.zip
 電子學(二),陳科宏,107學年,作業,zip,ch9,大二/電子學/電子學(二)/陳科宏/HW/蔡曜鴻/ch9.zip
 電子學(二),陳科宏,107學年,作業,zip,ch10,大二/電子學/電子學(二)/陳科宏/HW/蔡曜鴻/ch10.zip
 電子學(二),陳科宏,107學年,作業,zip,ch11,大二/電子學/電子學(二)/陳科宏/HW/蔡曜鴻/ch11.zip
@@ -443,7 +439,6 @@ Java程式設計,蔡中庸,109學年,期末考,zip,final,大二/Java程式設計
 電子實驗(二),未知,106學年,實驗,docx,結報8,大二/電子實驗/Spring_Semester/楊凱翔/lab8/Lab08_RE_Hear_Rate_Monitor_0510771_楊凱翔.docx
 電子實驗(二),未知,106學年,實驗,docx,結報9,大二/電子實驗/Spring_Semester/楊凱翔/lab9/Lab09_RE_ Motor_Control_0510771_楊凱翔.docx
 電子實驗(二),未知,106學年,實驗,docx,結報10,大二/電子實驗/Spring_Semester/楊凱翔/lab10/Lab10_RE_Instrumentation_Amplifier(NA.CS.MElab09)_0510771_楊凱翔.docx
-電子實驗(二),未知,106學年,實驗,docx,結報_FINAL,大二/電子實驗/Spring_Semester/楊凱翔/final/part1/FINAL_RE_Electrocardiography(ECG)_0510771_楊凱翔.docx
 電子實驗(二),未知,108學年,實驗,docx,結報1,大二/電子實驗/Spring_Semester/JasonHung/Lab01/Lab01_RE_Filters_0710757_洪杰生.docx
 電子實驗(二),未知,108學年,實驗,docx,結報2,大二/電子實驗/Spring_Semester/JasonHung/Lab02/Lab02_RE_AM Modulator_and_Demodulator_0710757_洪杰生.docx
 電子實驗(二),未知,108學年,實驗,docx,結報3,大二/電子實驗/Spring_Semester/JasonHung/Lab03/Lab03_AM_Receiver_0710757_洪杰生.docx
@@ -562,7 +557,6 @@ Java程式設計,蔡中庸,109學年,期末考,zip,final,大二/Java程式設計
 微算機原理與實驗,蕭得聖,105學年,期中考,zip,midterm,大二/微算機原理與實驗/蕭得聖/2016考古題/midterm.zip
 微算機原理與實驗,蕭得聖,105學年,期末考,zip,final,大二/微算機原理與實驗/蕭得聖/2016考古題/final.zip
 微算機原理與實驗,蕭得聖,106學年,期中考,zip,midterm,大二/微算機原理與實驗/蕭得聖/2017考古題/midterm.zip
-微算機原理與實驗,蕭得聖,106學年,期末考,zip,final,大二/微算機原理與實驗/蕭得聖/2017考古題/final.zip
 微算機原理與實驗,蕭得聖,105學年,實驗,doc,lab1,大二/微算機原理與實驗/LAB/Lab1/Lab1.doc
 微算機原理與實驗,蕭得聖,105學年,實驗,doc,lab2,大二/微算機原理與實驗/LAB/Lab2/Lab2.doc
 微算機原理與實驗,蕭得聖,105學年,實驗,doc,lab3,大二/微算機原理與實驗/LAB/Lab3/Lab3.doc
@@ -650,6 +644,7 @@ Java程式設計,蔡中庸,109學年,期末考,zip,final,大二/Java程式設計
 進階物件導向程式設計,蔡中庸,107學年,期中考,zip,midterm1,大二/進階物件導向程式設計/蔡中庸/2018/midterm1.zip
 進階物件導向程式設計,蔡中庸,107學年,期末考,zip,final,大二/進階物件導向程式設計/蔡中庸/2018/final.zip
 進階物件導向程式設計,蔡中庸,109學年,期中考,zip,midterm1,大二/進階物件導向程式設計/蔡中庸/2020/midterm1.zip
+進階物件導向程式設計,蔡中庸,107學年,期中考,zip,lab7z,大二/進階物件導向程式設計/蔡中庸/2018/LAB.7z
 訊號與系統,王忠炫,107學年,小考,txt,密碼,大二/訊號與系統/王忠炫_訊號與系統/ee1072ss.txt
 訊號與系統,王忠炫,107學年,小考,pdf,quiz1,大二/訊號與系統/王忠炫_訊號與系統/Quiz1_Solution.pdf
 訊號與系統,王忠炫,107學年,小考,pdf,quiz2,大二/訊號與系統/王忠炫_訊號與系統/Quiz2_Solution.pdf
@@ -694,7 +689,6 @@ Java程式設計,蔡中庸,109學年,期末考,zip,final,大二/Java程式設計
 訊號與系統,張文輝,108學年,小考,zip,quiz1,大二/訊號與系統/張文輝_訊號與系統/2019/quiz/quiz1.zip
 訊號與系統,張文輝,108學年,小考,zip,quiz2,大二/訊號與系統/張文輝_訊號與系統/2019/quiz/quiz2.zip
 訊號與系統,張文輝,108學年,期中考,zip,midterm,大二/訊號與系統/張文輝_訊號與系統/2019/midterm.zip
-訊號與系統,張文輝,108學年,期末考,zip,final,大二/訊號與系統/張文輝_訊號與系統/2019/final.zip
 訊號與系統,張文輝,109學年,期中考,zip,midterm,大二/訊號與系統/張文輝_訊號與系統/2020/Midterm1.zip
 訊號與系統,蔡尚澕,102學年,期末考,pdf,final,大二/訊號與系統/蔡尚澕_訊號與系統/2013/Final/Final_sol-1.pdf
 訊號與系統,蔡尚澕,103學年,期中考,pdf,midterm1,大二/訊號與系統/蔡尚澕_訊號與系統/2014/Mid1/2014-Midterm-1.pdf
@@ -733,7 +727,4 @@ Java程式設計,蔡中庸,109學年,期末考,zip,final,大二/Java程式設計
 作業系統,田伯隆,98學年,講義,ppt,ch6,大二/作業系統/田伯隆/ch06.ppt
 作業系統,田伯隆,98學年,講義,ppt,ch7,大二/作業系統/田伯隆/ch07.ppt
 作業系統,田伯隆,98學年,講義,ppt,ch8,大二/作業系統/田伯隆/ch08.ppt
-作業系統,田伯隆,98學年,講義,ppt,ch9,大二/作業系統/田伯隆/ch09.ppt
-作業系統,田伯隆,107學年,期中考,zip,midterm,大二/作業系統/2018fall/midterm.zip
-作業系統,田伯隆,107學年,期末考,zip,final,大二/作業系統/2018fall/final.zip
 作業系統,田伯隆,108學年,期中考,zip,midterm,大二/作業系統/2018spring/midterm.zip

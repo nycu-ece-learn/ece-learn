@@ -4,11 +4,13 @@ const Footer = () => {
     return (
         <footer>
             <p>
-                © 2021 Copyright: NYCU ECE | Developed by&nbsp;
+                © 2022 NYCU EESA | Developed by&nbsp;
                 <a href="https://github.com/Justin900429"
-                   target="_blank" rel="noreferrer">Justin</a> and&nbsp;
+                   target="_blank" rel="noreferrer">Justin</a>,&nbsp;
                 <a href="https://github.com/JoyceFang1213"
-                   target="_blank" rel="noreferrer">Joyce</a>
+                   target="_blank" rel="noreferrer">Joyce</a> and&nbsp;
+                <a href="https://github.com/cjchang925"
+                   target="_blank" rel="noreferrer">Chi-Chun Chang</a>
             </p>
             <p>
                 <a href="https://github.com/nycu-ece-learn/ece-learn"
