@@ -68,7 +68,7 @@ const NewFooter = () => {
                     </a>
                 </div>
                 <p className='copyright_text'>
-                    © 2022 NYCU EESA
+                    © 2023 NYCU EESA
                 </p>
             </div>
         );

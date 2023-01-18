@@ -13,7 +13,7 @@ const Footer = () => {
                    target="_blank" rel="noreferrer">Chi-Chun Chang</a>
             </p>
             <p>
-                <a href="https://github.com/nycu-ece-learn/ece-learn"
+                <a href="https://github.com/cjchang925/ece-learn"
                    target="_blank" rel="noreferrer">Source code</a> is released with MIT license.
             </p>
         </footer>
