@@ -10,6 +10,7 @@ import other from "./csv_file/other.txt"
 import { Helmet } from "react-helmet";
 import HomePage from "./components/HomePage/homepage";
 import NewFooter from "./components/Footer/newfooter";
+import UploadFile from "./components/UploadFile/UploadFile";
 
 const processCSV = (str, delim = ",") => {
     const rows = str.slice(str.indexOf("\n") + 1).split("\n");
@@ -55,7 +56,7 @@ function App() {
             left: 0,
             behavior: "instant",
         });
-        if (value === "readme" || value === "hope") {
+        if (value === "readme" || value === "hope" || value === "uploadfile") {
             setShowList(value);
         } else {
             setShowList("list");
@@ -142,10 +143,10 @@ function App() {
                 (() => {
                     if (showList === "readme") return <HomePage />
                     else if (showList === "hope") return <CardList />
+                    else if (showList === "uploadfile") return <UploadFile />
                     else return <List stickyTop={height} items={displayData} />
                 })()
             }
-            {/*<div style={{ height: "90px" }} />*/}
             <NewFooter />
         </div>
     );
