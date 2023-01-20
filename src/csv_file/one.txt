@@ -636,4 +636,4 @@
 邏輯設計,周世傑,109學年,講義,pdf,ch16,大一/邏輯設計/周世傑/Slide/ch16.pdf
 邏輯設計,周世傑,109學年,期中考,zip,midterm,大一/邏輯設計/周世傑/2020midterm.zip
 邏輯設計,周世傑,109學年,專題,zip,final_project,大一/邏輯設計/周世傑/final_project.zip
-邏輯設計,周世傑,109學年,專題,zip,traffic_light,大一/邏輯設計/周世傑/traffic_light.zip
+邏輯設計,周世傑,109學年,專題,zip,traffic_light,大一/邏輯設計/周世傑/traffic_light.zipr,r,r學年,小考,pdf,學雜費系統,大一/r/r/學雜費系統.pdf

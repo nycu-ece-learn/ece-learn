@@ -45,7 +45,7 @@ const NewFooter = () => {
                         target="_blank" rel="noreferrer">Chi-Chun Chang</a>(also maintaining).<br />
                     <a href="https://github.com/cjchang925/ece-learn"
                         target="_blank" rel="noreferrer">Source code</a> is released with MIT license.<br />
-                    © 2022 NYCU EESA
+                    © 2023 NYCU EESA
                 </p>
             </div>
         );
