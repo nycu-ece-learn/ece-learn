@@ -42,7 +42,7 @@ const UploadFile = () => {
         const formdata = new FormData();
         formdata.append("files", file);
         
-        await axios.post("http://localhost:3001/api-make-directory", null, {
+        await axios.post("/api-make-directory", null, {
             params: {
                 grade: grade,
                 subject: subject,
@@ -53,7 +53,7 @@ const UploadFile = () => {
             }
         });
         
-        axios.post("http://localhost:3001/api-upload-file", formdata, {
+        axios.post("/api-upload-file", formdata, {
             "Content-Type": "multipart/form-data",
             params: {
                 grade: grade,
