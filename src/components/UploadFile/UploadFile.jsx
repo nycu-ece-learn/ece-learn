@@ -44,23 +44,28 @@ const UploadFile = () => {
         
         await axios.post("/api-make-directory", null, {
             params: {
-                grade: grade,
-                subject: subject,
-                teacher: teacher,
-                year: year,
-                type: type,
+                grade: grade.current,
+                subject: subject.current,
+                teacher: teacher.current,
+                year: year.current,
+                type: type.current,
                 filename: file.name
             }
-        });
+        }).then((response) => {
+            if (response.data === 'Invalid filename!') {
+                alert('Invalid path or filename!')
+            }
+        })
         
         axios.post("/api-upload-file", formdata, {
             "Content-Type": "multipart/form-data",
             params: {
-                grade: grade,
-                subject: subject,
-                teacher: teacher,
-                year: year,
-                type: type
+                grade: grade.current,
+                subject: subject.current,
+                teacher: teacher.current,
+                year: year.current,
+                type: type.current,
+                filename: file.name
             }
         })
     }
@@ -103,7 +108,7 @@ const UploadFile = () => {
             </select>
             <label className="subject-label">科目全名</label>
             <input type='text' className="subject-input" onChange={handleSubjectChange} placeholder="Ex. 微積分(一)" required />
-            <label className="teacher-label">教師全名</label>
+            <label className="teacher-label">教師姓名</label>
             <input type='text' className="teacher-input" onChange={handleTeacherChange} placeholder="Ex. 莊重" required />
             <label className="year-label">學年度</label>
             <input type='text' className="year-input" onChange={handleYearChange} placeholder="Ex. 111" required />

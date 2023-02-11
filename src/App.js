@@ -1,5 +1,6 @@
 import NavbarCustom from "./components/Navbar/navbar";
 import { useState } from "react";
+import axios from "axios";
 import classes from "./App.module.css"
 import List from "./components/List/List";
 import CardList from "./components/card/card_list";
@@ -19,10 +20,14 @@ const processCSV = (str, delim = ",") => {
     });
 }
 
-const one_data = [];
+
+
+
+/*
 fetch(one)
     .then(blob => blob.text())
     .then(data => one_data.push(...processCSV(data)));
+*/
 
 const two_data = [];
 fetch(two)
@@ -45,6 +50,13 @@ function App() {
     const [allData, setAllData] = useState([]);
     const [displayData, setDisplayData] = useState([]);
     const [showList, setShowList] = useState("readme");
+
+    let one_data = [];
+    axios.get('/api/get-one-data').then((response) => {
+        one_data = response.data
+        console.log(one_data)
+    })
+    console.log(two_data)
 
     const setStickHandler = (heightValue) => {
         setHeight(heightValue);
