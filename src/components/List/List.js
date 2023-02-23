@@ -75,7 +75,6 @@ const List = (props) => {
             filter_list = props.items.filter((item) => {
                 return item[0] === text
             });
-
             // Maintain the subject
             const new_option = getUnique(filter_list);
             new_option[0] = [...new Set(props.items.map(arr => arr[0]).sort())]

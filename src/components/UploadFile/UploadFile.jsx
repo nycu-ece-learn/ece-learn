@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import './UploadFile.css'
 
@@ -41,31 +41,24 @@ const UploadFile = () => {
 
         const formdata = new FormData();
         formdata.append("files", file);
-        
-        await axios.post("/api-make-directory", null, {
-            params: {
-                grade: grade.current,
-                subject: subject.current,
-                teacher: teacher.current,
-                year: year.current,
-                type: type.current,
-                filename: file.name
-            }
-        }).then((response) => {
-            if (response.data === 'Invalid filename!') {
-                alert('Invalid path or filename!')
-            }
-        })
-        
-        axios.post("/api-upload-file", formdata, {
+
+        await axios.post("/api/user-upload-file", formdata, {
             "Content-Type": "multipart/form-data",
+            withCredentials: true,
             params: {
                 grade: grade.current,
                 subject: subject.current,
                 teacher: teacher.current,
                 year: year.current,
                 type: type.current,
-                filename: file.name
+                filename: file.name,
+            }
+        }).then(response => {
+            if (response.data.message === 'Invalid file!') {
+                alert('Invalid file type!')
+            } else if (response.data.message === 'Success!') {
+                alert('Upload successfully!')
+                window.location.reload()
             }
         })
     }
@@ -97,7 +90,7 @@ const UploadFile = () => {
 
     return (
         <div className="uploadFile">
-            <h2 className="uploadFileTitle">上傳檔案</h2>
+            <h2 className="uploadFileTitle">上傳考古</h2>
             <label className="grade-label">年級</label>
             <select type='text' className="grade-input" onChange={handleGradeChange} required>
                 <option value='pleaseChoose'>--請選擇年級--</option>

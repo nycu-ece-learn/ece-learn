@@ -1,0 +1,207 @@
+.login_whole_page {
+    min-height: 850px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='3000' height='2000' preserveAspectRatio='none' viewBox='0 0 3000 2000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1041%26quot%3b)' fill='none'%3e%3crect width='3000' height='2000' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M0%2c1154.753C228.28%2c1164.783%2c478.843%2c1165.998%2c659.068%2c1025.53C835.926%2c887.686%2c891.232%2c646.709%2c934.197%2c426.633C970.443%2c240.97%2c888.201%2c62.009%2c884.094%2c-127.114C879.219%2c-351.598%2c1058.719%2c-620.357%2c907.846%2c-786.653C755.813%2c-954.228%2c461.277%2c-767.851%2c244.367%2c-832.236C26.401%2c-896.935%2c-121.853%2c-1222.015%2c-339.716%2c-1156.967C-557.947%2c-1091.809%2c-501.002%2c-735.466%2c-651.695%2c-564.697C-804.678%2c-391.333%2c-1169.83%2c-401.735%2c-1207.473%2c-173.608C-1244.825%2c52.76%2c-910.065%2c163.64%2c-805.579%2c367.896C-708.204%2c558.252%2c-775.83%2c819.805%2c-622.872%2c969.208C-464.69%2c1123.714%2c-220.906%2c1145.047%2c0%2c1154.753' fill='%230b2037'%3e%3c/path%3e%3cpath d='M3000 3445.859C3281.275 3447.817 3587.98 3430.8959999999997 3803.157 3249.737 4012.299 3073.658 4067.4880000000003 2777.985 4113.404 2508.474 4151.239 2286.399 4055.4390000000003 2075.091 4041.587 1850.242 4026.0950000000003 1598.787 4189.759 1302.395 4027.24 1109.892 3865.149 917.8969999999999 3539.183 1054.734 3301.407 973.5039999999999 3047.165 886.6489999999999 2860.849 581.981 2594.971 620.597 2332.0370000000003 658.7860000000001 2195.285 951.3800000000001 2028.6889999999999 1158.355 1867.992 1358.002 1651.788 1548.635 1641.855 1804.728 1632.065 2057.139 1885.743 2231.585 1977.941 2466.759 2077.815 2721.513 2006.4009999999998 3049.316 2203.996 3238.6059999999998 2406.08 3432.197 2720.158 3443.911 3000 3445.859' fill='%23113457'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1041'%3e%3crect width='3000' height='2000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&family=Raleway:ital,wght@1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&family=Ubuntu:ital,wght@1,400;1,700&display=swap');
+
+.login_title {
+    font-size: 35px;
+    letter-spacing: 2px;
+    position: relative;
+    left: 200px;
+    font-family: 'Ubuntu', 'Raleway', 'Noto Sans TC', sans-serif;
+    color: white;
+}
+
+.login_page {
+    height: 700px;
+    width: 600px;
+    position: absolute;
+    right: 15vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f9bc3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.top_half {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    flex-direction: column;
+}
+
+.web_title {
+    margin-left: 0px;
+    font-size: 50px;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    color: black;
+    font-family: 'Ubuntu','Raleway', sans-serif;
+}
+
+.web_subtitle {
+    position: relative;
+    font-size: 30px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    color: black;
+    font-family: 'Ubuntu','Raleway', sans-serif;
+}
+
+#loginDiv {
+    position: relative;
+}
+
+.short_version_title {
+    display: none;
+}
+
+.glow-on-hover {
+    width: 400px;
+    height: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+@media screen and (max-width: 2000px) {
+    .login_title {
+        left: 200px !important;
+    }
+    .login_page {
+        right: 200px !important;
+    }
+}
+
+@media screen and (max-width: 1750px) {
+    .login_title {
+        left: 100px !important;
+    }
+    .login_page {
+        right: 100px !important;
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    .login_title {
+        left: 50px !important;
+    }
+    .login_page {
+        right: 50px !important;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .login_whole_page {
+        height: 100vh;
+        min-height: 700px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+    }
+    .login_title {
+        display: none;
+    }
+    .login_page {
+        width: 100vw;
+        right: 0px !important;
+        top: 0px;
+        min-height: 850px;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, black, #4d3f01) !important;
+    }
+    .top_half {
+        margin-bottom: 50px !important;
+    }
+    .web_title {
+        margin-left: 0px !important;
+        font-size: 30px !important;
+        letter-spacing: 2px;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+    }
+    .web_subtitle {
+        position: relative;
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+    }
+    .short_version_title {
+        display: flex !important;
+        position: relative;
+        margin-bottom: 50px;
+        font-size: 30px;
+        letter-spacing: 2px;
+        color: white;
+    }
+    .glow-on-hover {
+        width: 300px !important;
+        height: 70px !important;
+    }
+}
