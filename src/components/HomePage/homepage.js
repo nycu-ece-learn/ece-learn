@@ -1,9 +1,7 @@
 import Button from "../Note/buttonLink";
-import meme from '../../assets/meme.png';
 import HomepageCover from '../../assets/cover.png';
 import './homepage.css'
 import HomepageTextPhoto from '../../assets/allfour.jpg';
-import useWindowDimensions from "./useWindowSize";
 import { useState, useEffect } from 'react';
 import Note from "../Note/note";
 

@@ -23,11 +23,6 @@
 }
 
 .top-nav button:not(:first-child):hover {
-    background-color: #bbb;
-    color: black;
-}
-
-.top-nav button.select {
     background-color: #ddd;
     color: black;
 }
@@ -44,13 +39,14 @@
     margin-top: 8px;
     margin-right: 16px;
     font-size: 17px;
+    width: 200px;
 }
 
 .top-nav .icon {
     display: none;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1050px) {
     .top-nav button:not(:first-child) {
         display: none;
     }

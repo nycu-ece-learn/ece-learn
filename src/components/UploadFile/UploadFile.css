@@ -1,0 +1,425 @@
+.uploadFile {
+    width: 100%;
+    min-height: 550px;
+    height: calc(100vh - 250px);
+}
+
+@media screen and (max-width: 1600px) {
+    .uploadFile {
+        width: 100%;
+        min-height: 630px;
+        height: calc(100vh - 250px);
+    }
+    .year-label {
+        font-size: 30px;
+        margin-left: 100px !important;
+        position: absolute;
+        top: 400px !important;
+    }
+    
+    .year-input {
+        height: 40px;
+        width: 200px;
+        position: absolute;
+        top: 470px !important;
+        left: 100px !important;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    
+    .type-label {
+        font-size: 30px;
+        margin-left: 400px !important;
+        position: absolute;
+        top: 400px !important;
+        width: max-content;
+    }
+    
+    .type-input {
+        height: 40px;
+        width: 200px;
+        position: absolute;
+        top: 470px !important;
+        left: 400px !important;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+
+    .user-label {
+        font-size: 30px;
+        margin-left: 700px !important;
+        position: absolute;
+        top: 400px !important;
+    }
+    
+    .user-input {
+        position: absolute;
+        top: 470px !important;
+        left: 700px !important;
+        font-size: 25px;
+    }
+    
+    .file-label {
+        font-size: 30px;
+        margin-left: 100px !important;
+        position: absolute;
+        top: 550px !important;
+    }
+    
+    .file-input {
+        position: absolute;
+        top: 610px !important;
+        left: 100px !important;
+        font-size: 25px;
+    }
+    
+    .submit-input {
+        position: absolute;
+        top: 610px !important;
+        left: 500px !important;
+        font-size: 25px;
+        width: 100px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .uploadFile {
+        height: 920px !important;
+    }
+    .subject-label {
+        font-size: 30px;
+        margin-left: 400px !important;
+        position: absolute;
+        top: 250px !important;
+    }
+    .subject-input {
+        height: 40px;
+        width: 200px;
+        position: absolute;
+        top: 320px !important;
+        left: 400px !important;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    .teacher-label {
+        font-size: 30px;
+        margin-left: 100px !important;
+        position: absolute;
+        top: 400px !important;
+    }
+    
+    .teacher-input {
+        height: 40px;
+        width: 200px;
+        position: absolute;
+        top: 470px !important;
+        left: 100px !important;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    
+    .year-label {
+        font-size: 30px;
+        margin-left: 400px !important;
+        position: absolute;
+        top: 400px !important;
+    }
+    
+    .year-input {
+        height: 40px;
+        width: 200px;
+        position: absolute;
+        top: 470px !important;
+        left: 400px !important;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    
+    .type-label {
+        font-size: 30px;
+        margin-left: 100px !important;
+        position: absolute;
+        top: 550px !important;
+        width: max-content;
+    }
+    
+    .type-input {
+        height: 40px;
+        width: 200px;
+        position: absolute;
+        top: 620px !important;
+        left: 100px !important;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+
+    .user-label {
+        font-size: 30px;
+        margin-left: 400px !important;
+        position: absolute;
+        top: 550px !important;
+    }
+    
+    .user-input {
+        position: absolute;
+        top: 620px !important;
+        left: 400px !important;
+        font-size: 25px;
+    }
+    
+    .file-label {
+        font-size: 30px;
+        margin-left: 100px !important;
+        position: absolute;
+        top: 700px !important;
+    }
+    
+    .file-input {
+        position: absolute;
+        top: 770px !important;
+        left: 100px !important;
+        font-size: 25px;
+    }
+    
+    .submit-input {
+        position: absolute;
+        top: 860px !important;
+        left: 100px !important;
+        font-size: 25px;
+        width: 100px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .uploadFile {
+        height: 1200px !important;
+    }
+    .subject-label {
+        font-size: 30px;
+        margin-left: 100px !important;
+        position: absolute;
+        top: 400px !important;
+    }
+    .subject-input {
+        height: 40px;
+        width: 200px;
+        position: absolute;
+        top: 470px !important;
+        left: 100px !important;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    .teacher-label {
+        font-size: 30px;
+        margin-left: 100px !important;
+        position: absolute;
+        top: 550px !important;
+    }
+    
+    .teacher-input {
+        height: 40px;
+        width: 200px;
+        position: absolute;
+        top: 620px !important;
+        left: 100px !important;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    
+    .year-label {
+        font-size: 30px;
+        margin-left: 100px !important;
+        position: absolute;
+        top: 700px !important;
+    }
+    
+    .year-input {
+        height: 40px;
+        width: 200px;
+        position: absolute;
+        top: 770px !important;
+        left: 100px !important;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    
+    .type-label {
+        font-size: 30px;
+        margin-left: 100px !important;
+        position: absolute;
+        top: 850px !important;
+        width: max-content;
+    }
+    
+    .type-input {
+        height: 40px;
+        width: 200px;
+        position: absolute;
+        top: 920px !important;
+        left: 100px !important;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+
+    .user-label {
+        font-size: 30px;
+        margin-left: 100px !important;
+        position: absolute;
+        top: 1000px !important;
+    }
+    
+    .user-input {
+        position: absolute;
+        top: 1070px !important;
+        left: 100px !important;
+        font-size: 25px;
+    }
+    
+    .file-label {
+        font-size: 30px;
+        margin-left: 100px !important;
+        position: absolute;
+        top: 1000px !important;
+    }
+    
+    .file-input {
+        position: absolute;
+        top: 1070px !important;
+        left: 100px !important;
+        font-size: 25px;
+        width: 260px !important;
+    }
+    
+    .submit-input {
+        position: absolute;
+        top: 1170px !important;
+        left: 100px !important;
+        font-size: 25px;
+        width: 100px;
+        height: 40px;
+    }
+}
+
+.uploadFileTitle {
+    font-size: 40px;
+    margin-left: 100px;
+    position: absolute;
+    top: 100px;
+    
+}
+
+.grade-label {
+    font-size: 30px;
+    margin-left: 100px;
+    position: absolute;
+    top: 250px;
+    
+}
+
+.grade-input {
+    height: 44px;
+    width: 200px;
+    position: absolute;
+    top: 320px;
+    left: 100px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.subject-label {
+    font-size: 30px;
+    margin-left: 400px;
+    position: absolute;
+    top: 250px;
+}
+
+.subject-input {
+    height: 40px;
+    width: 200px;
+    position: absolute;
+    top: 320px;
+    left: 400px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.teacher-label {
+    font-size: 30px;
+    margin-left: 700px;
+    position: absolute;
+    top: 250px;
+    width: 130px;
+}
+
+.teacher-input {
+    height: 40px;
+    width: 200px;
+    position: absolute;
+    top: 320px;
+    left: 700px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.year-label {
+    font-size: 30px;
+    margin-left: 1000px;
+    position: absolute;
+    top: 250px;
+}
+
+.year-input {
+    height: 40px;
+    width: 200px;
+    position: absolute;
+    top: 320px;
+    left: 1000px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.type-label {
+    font-size: 30px;
+    margin-left: 1300px;
+    position: absolute;
+    top: 250px;
+    width: max-content;
+}
+
+.type-input {
+    height: 44px;
+    width: 200px;
+    position: absolute;
+    top: 320px;
+    left: 1300px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.file-label {
+    font-size: 30px;
+    margin-left: 100px;
+    position: absolute;
+    top: 450px;
+    width: 60px;
+}
+
+.file-input {
+    position: absolute;
+    top: 525px;
+    left: 100px;
+    font-size: 25px;
+    width: auto;
+    height: auto;
+}
+
+.submit-input {
+    position: absolute;
+    top: 520px;
+    left: 500px;
+    font-size: 25px;
+    width: 100px;
+    height: 44px;
+}

@@ -1,49 +1,43 @@
 import NavbarCustom from "./components/Navbar/navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import classes from "./App.module.css"
 import List from "./components/List/List";
 import CardList from "./components/card/card_list";
-import one from "./csv_file/one.txt";
-import two from "./csv_file/two.txt";
-import advance from "./csv_file/advance.txt";
-import other from "./csv_file/other.txt"
 import { Helmet } from "react-helmet";
 import HomePage from "./components/HomePage/homepage";
 import NewFooter from "./components/Footer/newfooter";
-
-const processCSV = (str, delim = ",") => {
-    const rows = str.slice(str.indexOf("\n") + 1).split("\n");
-    return rows.map(row => {
-        return row.split(delim);
-    });
-}
-
-const one_data = [];
-fetch(one)
-    .then(blob => blob.text())
-    .then(data => one_data.push(...processCSV(data)));
-
-const two_data = [];
-fetch(two)
-    .then(blob => blob.text())
-    .then(data => two_data.push(...processCSV(data)));
-
-const advance_data = [];
-fetch(advance)
-    .then(blob => blob.text())
-    .then(data => advance_data.push(...processCSV(data)));
-
-const other_data = []
-fetch(other)
-    .then(blob => blob.text())
-    .then(data => other_data.push(...processCSV(data)));
-
+import UploadFile from "./components/UploadFile/UploadFile";
+import NewLogin from "./components/Login/NewLogin";
 
 function App() {
     const [height, setHeight] = useState("48");
     const [allData, setAllData] = useState([]);
-    const [displayData, setDisplayData] = useState([]);
-    const [showList, setShowList] = useState("readme");
+    const [displayData, setDisplayData] = useState(JSON.parse(window.localStorage.getItem('display_data')) || []);
+    const [showList, setShowList] = useState(JSON.parse(window.localStorage.getItem('showList')) || "readme");
+    const [loginState, setLoginState] = useState(JSON.parse(window.localStorage.getItem('loginState')) || false)
+    const [user, setUser] = useState(window.localStorage.getItem('name') || "");
+
+    let one_data = [];
+    axios.get('/api/get-one-data').then((response) => {
+        one_data = response.data
+    })
+
+
+    let two_data = [];
+    axios.get('/api/get-two-data').then((response) => {
+        two_data = response.data
+    })
+
+    let advance_data = [];
+    axios.get('/api/get-advance-data').then((response) => {
+        advance_data = response.data
+    })
+
+    let other_data = [];
+    axios.get('/api/get-other-data').then((response) => {
+        other_data = response.data
+    })
 
     const setStickHandler = (heightValue) => {
         setHeight(heightValue);
@@ -55,24 +49,30 @@ function App() {
             left: 0,
             behavior: "instant",
         });
-        if (value === "readme" || value === "hope") {
+        if (value === "readme" || value === "hope" || value === "uploadfile") {
             setShowList(value);
+            window.localStorage.setItem('showList', JSON.stringify(value))
         } else {
             setShowList("list");
+            window.localStorage.setItem('showList', JSON.stringify("list"))
             if (value === "first") {
                 setDisplayData(one_data);
+                window.localStorage.setItem('display_data', JSON.stringify(one_data))
                 setAllData(one_data);
             }
             if (value === "second") {
                 setDisplayData(two_data);
+                window.localStorage.setItem('display_data', JSON.stringify(two_data))
                 setAllData(two_data);
             }
             if (value === "advance") {
                 setDisplayData(advance_data);
+                window.localStorage.setItem('display_data', JSON.stringify(advance_data))
                 setAllData(advance_data);
             }
             if (value === "other") {
                 setDisplayData(other_data);
+                window.localStorage.setItem('display_data', JSON.stringify(other_data))
                 setAllData(other_data);
             }
         }
@@ -80,8 +80,10 @@ function App() {
 
     const setTextChange = (text) => {
         setShowList("list");
+        window.localStorage.setItem('showList', JSON.stringify("list"))
         if (text === "") {
             setDisplayData(allData);
+            window.localStorage.setItem('display_data', JSON.stringify(allData))
             return;
         }
 
@@ -118,37 +120,84 @@ function App() {
         }, [])
 
         setDisplayData(filter_hl_list);
+        window.localStorage.setItem('display_data', JSON.stringify(filter_hl_list))
     }
 
-    return (
-        <div className={classes["App"]}>
-            <Helmet>
-                <title>交大電機考古網站</title>
-                <meta name="description"
-                    content="交大電機專用考古網站，您考前的好幫手" />
-                <meta name="og:description"
-                    content="交大電機專用考古網站，您考前的好幫手" />
-                <meta property="og:site_name" content="Learn with NYCU ECE" />
-                <meta property="og:locale" content="zh_tw" />
-                <meta property="og:url" content="nycu-ece-learn.github.io" />
-                <meta property="og:image:secure_url" content="https://storage.googleapis.com/ece-files/og.jpeg" />
-                <meta property="og:image:type" content="image/jpeg" />
-            </Helmet>
-            <NavbarCustom
-                stickHandler={setStickHandler} gradeClick={setGradeClick}
-                textChange={setTextChange}
-            />
-            {
-                (() => {
-                    if (showList === "readme") return <HomePage />
-                    else if (showList === "hope") return <CardList />
-                    else return <List stickyTop={height} items={displayData} />
-                })()
-            }
-            {/*<div style={{ height: "90px" }} />*/}
-            <NewFooter />
-        </div>
-    );
+    const Logout = () => {
+        fetch("/api/logout", {
+            method: "GET",
+            credentials: 'include'
+        })
+        window.localStorage.removeItem('name')
+        window.localStorage.removeItem('display_data')
+        window.localStorage.removeItem('showList')
+        window.localStorage.removeItem('loginState')
+        setLoginState(false)
+    }
+
+    useEffect(() => {
+        const loginCheck = async () => {
+            await fetch("/api/login-status-check", {
+                method: "GET",
+                credentials: 'include'
+            }).then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+            }).then(data => {
+                if (data) {
+                    if (data.message === 'Has record!') {
+                        setLoginState(true)
+                        window.localStorage.setItem('loginState', true)
+                    } else if (data.message === 'No record!') {
+                        setLoginState(false)
+                        window.localStorage.setItem('loginState', false)
+                    }
+                }
+            })
+        }
+        loginCheck()
+    })
+
+    if (loginState) {
+        return (
+            <div className={classes["App"]}>
+                <Helmet>
+                    <title>交大電機考古網站</title>
+                    <meta name="description"
+                        content="交大電機專用考古網站，您考前的好幫手" />
+                    <meta name="og:description"
+                        content="交大電機專用考古網站，您考前的好幫手" />
+                    <meta property="og:site_name" content="Learn with NYCU ECE" />
+                    <meta property="og:locale" content="zh_tw" />
+                    <meta property="og:url" content="prevexam.dece.nycu.edu.tw" />
+                    <meta property="og:image:secure_url" content="https://storage.googleapis.com/ece-files/og.jpeg" />
+                    <meta property="og:image:type" content="image/jpeg" />
+                    <script src="https://accounts.google.com/gsi/client" async defer></script>
+                </Helmet>
+                <NavbarCustom
+                    stickHandler={setStickHandler} gradeClick={setGradeClick}
+                    textChange={setTextChange} userName={user} logoutHandler={Logout}
+                />
+                {
+                    (() => {
+                        if (showList === "readme") return <HomePage />
+                        else if (showList === "hope") return <CardList />
+                        else if (showList === "uploadfile") return <UploadFile />
+                        else return <List stickyTop={height} items={displayData} />
+                    })()
+                }
+                <NewFooter />
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <NewLogin handleLoginState={setLoginState} handleUser={setUser} />
+            </div>
+        )
+
+    }
 }
 
 export default App;

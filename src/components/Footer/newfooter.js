@@ -43,9 +43,9 @@ const NewFooter = () => {
                         target="_blank" rel="noreferrer">Joyce</a> and&nbsp;
                     <a href="https://github.com/cjchang925"
                         target="_blank" rel="noreferrer">Chi-Chun Chang</a>(also maintaining).<br />
-                    <a href="https://github.com/nycu-ece-learn/ece-learn"
+                    <a href="https://github.com/cjchang925/ece-learn"
                         target="_blank" rel="noreferrer">Source code</a> is released with MIT license.<br />
-                    © 2022 NYCU EESA
+                    © 2023 NYCU EESA
                 </p>
             </div>
         );
@@ -68,7 +68,7 @@ const NewFooter = () => {
                     </a>
                 </div>
                 <p className='copyright_text'>
-                    © 2022 NYCU EESA
+                    © 2023 NYCU EESA
                 </p>
             </div>
         );
