@@ -1,5 +1,5 @@
-.login_whole_page {
-    min-height: 850px;
+/* .login_whole_page {
+    min-height: 700px;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -18,12 +18,14 @@
 }
 
 .login_page {
-    height: 700px;
+    height: 80vh;
+    min-height: 500px;
     width: 600px;
     position: absolute;
     right: 15vw;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     background-color: #f9bc3d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.2);
@@ -33,7 +35,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 200px;
     margin-bottom: 100px;
     flex-direction: column;
 }
@@ -204,4 +205,4 @@
         width: 300px !important;
         height: 70px !important;
     }
-}
+} */

@@ -1,12 +1,12 @@
 import classes from "./note.module.css"
 import Button from "./buttonLink";
 import meme from "../../assets/meme.png"
-import HomepageCover from '../../assets/cover.png';
+// import HomepageCover from '../../assets/cover.png';
+import React from "react";
 
 const Note = () => {
     return (
         <div className={classes["note-layout"]}>
-            <img src={HomepageCover} alt='home page cover' style={{ width: '100%' }}/>
             {/*
             <NoteBlock blockType="danger" text="
             ⚠️ 現在暑假期間考古網站正在升級，暫不開放"

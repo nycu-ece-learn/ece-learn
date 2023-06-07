@@ -1,6 +1,6 @@
 .homepage {
     width: 100%;
-    height: 76vw;
+    height: fit-content;
     z-index: 0;
 }
 
@@ -17,7 +17,7 @@
     letter-spacing: 0.25vw;
     color: rgb(250, 241, 215);
     position: absolute;
-    top: 31vw;
+    top: 61vw;
     left: 10vw;
     z-index: 2;
 }
@@ -27,7 +27,7 @@
     letter-spacing: 0.1vw;
     color: rgb(250, 241, 215);
     position: absolute;
-    top: 35vw;
+    top: 65vw;
     left: 10vw;
     z-index: 2;
     line-height: 2vw;
@@ -38,7 +38,7 @@
     letter-spacing: 0.25vw;
     color: rgb(250, 241, 215);
     position: absolute;
-    top: 46vw;
+    top: 76vw;
     left: 10vw;
     z-index: 2;
 }
@@ -48,7 +48,7 @@
     letter-spacing: 0.1vw;
     color: rgb(250, 241, 215);
     position: absolute;
-    top: 50vw;
+    top: 80vw;
     left: 10vw;
     z-index: 2;
     line-height: 2vw;
@@ -59,7 +59,7 @@
     letter-spacing: 0.25vw;
     color: rgb(250, 241, 215);
     position: absolute;
-    top: 59vw;
+    top: 89vw;
     left: 10vw;
     z-index: 2;
 }
@@ -69,7 +69,7 @@
     letter-spacing: 0.1vw;
     color: rgb(250, 241, 215);
     position: absolute;
-    top: 63vw;
+    top: 93vw;
     left: 10vw;
     z-index: 2;
     line-height: 2vw;
@@ -80,7 +80,7 @@
     letter-spacing: 0.25vw;
     color: rgb(250, 241, 215);
     position: absolute;
-    top: 68vw;
+    top: 98vw;
     left: 10vw;
     z-index: 2;
 }
@@ -90,7 +90,7 @@
     letter-spacing: 0.1vw;
     color: rgb(250, 241, 215);
     position: absolute;
-    top: 72vw;
+    top: 102vw;
     left: 10vw;
     z-index: 2;
     line-height: 2vw;

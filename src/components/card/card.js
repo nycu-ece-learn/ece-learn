@@ -1,5 +1,6 @@
 import classes from "./card.module.css"
 import image from "./user.png"
+import React from "react";
 
 const Card = (props) => {
     return (
