@@ -187,7 +187,6 @@ function App() {
                         else return <List stickyTop={height} items={displayData} />
                     })()
                 }
-                <BSFooter />
             </div>
         )
     } else {

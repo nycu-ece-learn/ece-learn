@@ -60,7 +60,7 @@ const UploadFile = () => {
                 alert('Upload successfully!')
                 window.location.reload()
             } else if (response.data.message === 'Invalid user!') {
-                alert('Invalid user!')
+                alert('Invalid user! Maybe you are not using NYCU account.')
             }
         })
     }

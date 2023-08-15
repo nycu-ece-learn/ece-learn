@@ -14,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     font-size: 20px;
 }
 
@@ -36,7 +35,7 @@
 }
 
 .glow-on-hover:active {
-    color: white;
+    color: #fff;
 }
 
 .glow-on-hover:active:after {
@@ -57,4 +56,10 @@
     left: 0;
     top: 0;
     border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
