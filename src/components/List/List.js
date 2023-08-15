@@ -158,7 +158,7 @@ const List = (props) => {
     return (
         <div className={classes["list_div"]}>
             <table>
-                <thead style={{ top: `${props.stickyTop}px` }}>
+                <thead style={{ top: `${props.stickyTop}px`, textAlign: 'center' }}>
                     <tr>
                         {
                             table_head.map((item, id) => (

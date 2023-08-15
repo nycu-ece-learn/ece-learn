@@ -1,6 +1,6 @@
 import axios from "axios";
-import { useState, useRef, useEffect } from "react";
-
+import { useState, useRef } from "react";
+import React from "react";
 import './UploadFile.css'
 
 const UploadFile = () => {
@@ -59,6 +59,8 @@ const UploadFile = () => {
             } else if (response.data.message === 'Success!') {
                 alert('Upload successfully!')
                 window.location.reload()
+            } else if (response.data.message === 'Invalid user!') {
+                alert('Invalid user! Maybe you are not using NYCU account.')
             }
         })
     }

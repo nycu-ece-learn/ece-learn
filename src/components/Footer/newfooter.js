@@ -3,16 +3,17 @@ import { GrFacebook } from 'react-icons/gr';
 import { FaGithubSquare } from 'react-icons/fa'
 import { IoLogoYoutube } from 'react-icons/io';
 import { useState, useEffect } from 'react';
+import React from "react";
 
 const NewFooter = () => {
     const [matches, setMatches] = useState(
-        window.matchMedia("(min-width: 1400px)").matches
+        window.matchMedia("(min-width: 1200px)").matches
     )
 
     useEffect(() => {
         console.log(window.innerWidth);
         window
-            .matchMedia("(min-width: 1400px)")
+            .matchMedia("(min-width: 1200px)")
             .addEventListener('change', e => setMatches(e.matches));
     }, []);
 
@@ -22,7 +23,7 @@ const NewFooter = () => {
         return (
             <div className='newfooter'>
                 <p className='nycueesa_title'>
-                    國立陽明交通大學 電機系學會 NYCU EESA
+                    國立陽明交通大學 電機系學會
                 </p>
                 <div className='icon_set'>
                     <a href='https://zh-tw.facebook.com/nctuECEStudentAssociation/' target='_blank' rel="noreferrer">

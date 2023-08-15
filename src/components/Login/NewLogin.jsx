@@ -2,17 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { useGoogleLogin } from '@react-oauth/google';
 import { FcGoogle } from "react-icons/fc";
 import './NewLogin.css'
+import { useLayoutEffect } from 'react';
 
 const NewLogin = (props) => {
     const [user, setUser] = useState()
-    const [profile, setProfile] = useState([]);
+    // const [profile, setProfile] = useState([]);
 
     const login = useGoogleLogin({
         onSuccess: (codeResponse) => setUser(codeResponse),
         onError: (err) => console.log(err)
     });
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (user) {
             fetch(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
                 method: "GET",
@@ -21,10 +22,8 @@ const NewLogin = (props) => {
                     Accept: 'application/json'
                 }
             }).then((res) => {
-                props.handleLoginState(true)
                 return res.json();
             }).then(async (data) => {
-                setProfile(data)
                 await fetch('/api/login', {
                     method: "POST",
                     credentials: 'include',
@@ -33,12 +32,14 @@ const NewLogin = (props) => {
                         'Accept': 'application/json'
                     },
                     body: JSON.stringify(data)
+                }).then(() => {
+                    props.handleUser(data.given_name)
+                    window.localStorage.setItem('name', data.given_name)
+                    props.handleLoginState(true)
                 })
-                props.handleUser(data.given_name)
-                window.localStorage.setItem('name', data.given_name)
             })
         }
-    }, [user])
+    }, [user, props])
 
     return (
         <div className="login_whole_page">

@@ -1,18 +1,19 @@
 import Button from "../Note/buttonLink";
-import HomepageCover from '../../assets/cover.png';
+import HomepageCover from '../../assets/cover0515.png';
 import './homepage.css'
 import HomepageTextPhoto from '../../assets/allfour.jpg';
 import { useState, useEffect } from 'react';
 import Note from "../Note/note";
+import React from "react";
 
 const HomePage = () => {
     const [matches, setMatches] = useState(
-        window.matchMedia("(min-width: 1400px)").matches
+        window.matchMedia("(min-width: 1200px)").matches
     )
 
     useEffect(() => {
         window
-            .matchMedia("(min-width: 1400px)")
+            .matchMedia("(min-width: 1200px)")
             .addEventListener('change', e => setMatches(e.matches));
     }, []);
 
@@ -54,7 +55,7 @@ const HomePage = () => {
                     D. 想說的話
                 </h2>
                 <p className="homepage_fourth_text">
-                    &bull; 我們會努力讓網頁變好，拜託別炮了QQ
+                    &bull; 我們會努力讓網頁變好, 盡可能滿足大家的需求！
                 </p>
             </div>
         )

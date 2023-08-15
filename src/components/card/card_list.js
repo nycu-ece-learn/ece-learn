@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import Card from "./card";
 import classes from "./card.module.css"
+import React from "react";
 
 const preprocess = (obj) => {
     return obj.table.rows.map(row => (

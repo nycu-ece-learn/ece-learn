@@ -2,6 +2,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBars} from '@fortawesome/free-solid-svg-icons'
 import classes from "./navbar.module.css"
 import {useState} from "react";
+import React from "react";
 
 const NavbarCustom = (props) => {
     const [inputText, setInputText] = useState("");

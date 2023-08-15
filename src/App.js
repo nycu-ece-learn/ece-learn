@@ -1,14 +1,15 @@
 import NavbarCustom from "./components/Navbar/navbar";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import axios from "axios";
 import classes from "./App.module.css"
 import List from "./components/List/List";
 import CardList from "./components/card/card_list";
 import { Helmet } from "react-helmet";
-import HomePage from "./components/HomePage/homepage";
-import NewFooter from "./components/Footer/newfooter";
 import UploadFile from "./components/UploadFile/UploadFile";
-import NewLogin from "./components/Login/NewLogin";
+import React from "react";
+import BSFooter from "./components/Footer/BSFooter";
+import BSHomePage from "./components/HomePage/BSHomePage";
+import BSLogin from "./components/Login/BSLogin";
 
 function App() {
     const [height, setHeight] = useState("48");
@@ -22,7 +23,6 @@ function App() {
     axios.get('/api/get-one-data').then((response) => {
         one_data = response.data
     })
-
 
     let two_data = [];
     axios.get('/api/get-two-data').then((response) => {
@@ -135,7 +135,7 @@ function App() {
         setLoginState(false)
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const loginCheck = async () => {
             await fetch("/api/login-status-check", {
                 method: "GET",
@@ -168,7 +168,7 @@ function App() {
                         content="交大電機專用考古網站，您考前的好幫手" />
                     <meta name="og:description"
                         content="交大電機專用考古網站，您考前的好幫手" />
-                    <meta property="og:site_name" content="Learn with NYCU ECE" />
+                    <meta property="og:site_name" content="Learn with NYCU EE" />
                     <meta property="og:locale" content="zh_tw" />
                     <meta property="og:url" content="prevexam.dece.nycu.edu.tw" />
                     <meta property="og:image:secure_url" content="https://storage.googleapis.com/ece-files/og.jpeg" />
@@ -181,22 +181,20 @@ function App() {
                 />
                 {
                     (() => {
-                        if (showList === "readme") return <HomePage />
+                        if (showList === "readme") return <BSHomePage />
                         else if (showList === "hope") return <CardList />
                         else if (showList === "uploadfile") return <UploadFile />
                         else return <List stickyTop={height} items={displayData} />
                     })()
                 }
-                <NewFooter />
             </div>
         )
     } else {
         return (
             <div>
-                <NewLogin handleLoginState={setLoginState} handleUser={setUser} />
+                <BSLogin handleLoginState={setLoginState} handleUser={setUser} />
             </div>
         )
-
     }
 }
 
